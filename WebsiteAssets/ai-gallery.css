@@ -1,0 +1,140 @@
+/* Scoped to the AI pilot: all other category layouts stay as authored. */
+#catViewProjectsGrid.ai-artwork-grid {
+  display: block;
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.ai-artwork-tile {
+  display: block;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 8px;
+  break-inside: avoid;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(22, 27, 34, 0.65);
+  cursor: zoom-in;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.ai-artwork-tile:hover {
+  border-color: #3B82F6;
+  background: #161B22;
+}
+
+.ai-artwork-tile:focus-visible,
+.ai-artwork-dialog button:focus-visible {
+  outline: 3px solid #F5B921;
+  outline-offset: 4px;
+}
+
+.ai-artwork-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ai-artwork-dialog {
+  width: min(960px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: #161B22;
+  color: #F5F7FA;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  overscroll-behavior: contain;
+}
+
+.ai-artwork-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+}
+
+.ai-artwork-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 12px;
+}
+
+.ai-artwork-dialog button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: #0E1116;
+  color: #F5F7FA;
+  cursor: pointer;
+  transition: border-color 180ms ease;
+}
+
+.ai-artwork-dialog button:hover { border-color: #F5B921; }
+.ai-artwork-dialog button svg { width: 20px; height: 20px; }
+
+.ai-artwork-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 0 16px;
+}
+
+.ai-artwork-stage img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(70vh, 760px);
+  max-height: min(70dvh, 760px);
+  object-fit: contain;
+}
+
+.ai-artwork-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 16px;
+}
+
+.ai-artwork-position {
+  min-width: 48px;
+  text-align: center;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: #B4BCC8;
+}
+
+.ai-artwork-error {
+  padding: 16px;
+  color: #F5F7FA;
+  font-size: 14px;
+  text-align: center;
+}
+.ai-artwork-error a { color: #F5B921; text-decoration: underline; }
+
+@media (max-width: 1023px) {
+  #catViewProjectsGrid.ai-artwork-grid { column-count: 2; }
+}
+@media (max-width: 639px) {
+  #catViewProjectsGrid.ai-artwork-grid { column-count: 1; }
+  .ai-artwork-stage { padding-inline: 8px; }
+  .ai-artwork-dialog { border-radius: 16px; }
+}
+@media (max-height: 500px) {
+  .ai-artwork-stage img { max-height: calc(100vh - 164px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-artwork-tile, .ai-artwork-dialog button { transition: none; }
+}

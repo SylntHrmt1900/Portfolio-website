@@ -17,3 +17,10 @@ Typography: Plus Jakarta Sans with Playfair Display italic accents.
 Only when actual artwork files are supplied, replace project cards INSIDE `#catViewProjectsGrid` with artwork-only image tiles, preserving existing category view routing and surrounding layout. Opening an artwork should show an enlarged lightbox. Do not clear existing demo content until the real assets are available and verified.
 
 Do not introduce extra galleries, an empty-manifest replacement, filler banners, or new homepage sections.
+
+## AI pilot implemented
+- The AI category now renders actual artwork from `gallery/ai-artworks.js`.
+- Its tiles and dialog must show the full artwork proportionally without cropping.
+- Do not reintroduce visible tile titles, descriptions, badges, or text overlays.
+- Keep the other five categories unchanged until their artwork is supplied.
+- Preserve the dialog's keyboard controls, focus restoration, and gallery scroll position.
