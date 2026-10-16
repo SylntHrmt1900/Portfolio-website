@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Rajakumar M — Creative Lead | Brand, Digital &amp; Motion Design</title>
+  <meta name="description" content="Executive portfolio of Rajakumar M. 20+ years of creative leadership across brand architecture, high-conversion UI/UX, enterprise design systems, motion graphics, and generative AI pipelines.">
+  
+  <!-- Lenis Inertial Smooth Scrolling -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0E1116;
+        color: #F5F7FA;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0E1116;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262D38;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3B82F6;
+    }
+    
+    /* Lenis Smooth Scroll CSS */
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+
+    .glass-panel {
+      background: rgba(22, 27, 34, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-panel-subtle {
+      background: rgba(14, 17, 22, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    /* Silky Apple-Style Scroll Reveal Animations (High-Precision GPU Acceleration) */
+    .portfolio-card, .skill-card, .reveal-card {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0) scale(0.95);
+      will-change: transform, opacity;
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Visible state triggered by IntersectionObserver */
+    .portfolio-card.revealed, .skill-card.revealed, .reveal-card.revealed {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .portfolio-card.revealed:hover {
+      transform: translate3d(0, -6px, 0) scale(1.01);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .skill-card.revealed:hover {
+      transform: translate3d(0, -4px, 0) scale(1.01);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* Subtle animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.28; transform: scale(1); }
+      50% { opacity: 0.38; transform: scale(1.04); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 8s ease-in-out infinite;
+    }
+
+    /* Editorial photographic portrait card: refined physical frame with original studio background */
+    .hero-portrait-frame {
+      position: relative;
+      width: min(100%, 480px);
+      aspect-ratio: 0.82;
+      margin-left: auto;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background-color: #949699;
+      box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.55),
+                  0 12px 24px -8px rgba(0, 0, 0, 0.4),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+    .hero-portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      border-radius: inherit;
+    }
+    @media (max-width: 1023px) {
+      .hero-portrait-frame {
+        width: min(100%, 440px);
+        margin-inline: auto;
+        border-radius: 26px;
+      }
+    }
+    @media (max-width: 639px) {
+      .hero-portrait-frame {
+        width: min(100%, 360px);
+        aspect-ratio: 0.84;
+        border-radius: 24px;
+      }
+      .hero-portrait-frame img {
+        object-position: center 20%;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-portrait-frame { transition: none; }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#161B22",
+            background: "#0E1116",
+            "border-ui": "#262D38",
+            "primary-text": "#F5F7FA",
+            "secondary-text": "#B4BCC8",
+            "amber-accent": "#F5B921",
+            "cobalt-accent": "#3B82F6"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-2xl": "4rem",
+            "space-3xl": "6rem",
+            "margin": "1.25rem",
+            "margin-tablet": "2.5rem",
+            "margin-desktop": "4rem",
+            "gutter": "1.5rem",
+            "gutter-desktop": "2rem"
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            serif: ["'Playfair Display'", "serif"],
+            "headline-xl": ["'Plus Jakarta Sans'", "sans-serif"],
+            "headline-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+            "headline-md": ["'Plus Jakarta Sans'", "sans-serif"],
+            "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+            "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
+            "body-sm": ["'Plus Jakarta Sans'", "sans-serif"],
+            "label-caps": ["'Plus Jakarta Sans'", "sans-serif"],
+            "label-mono": ["'Plus Jakarta Sans'", "sans-serif"],
+            "display-hero": ["'Plus Jakarta Sans'", "sans-serif"],
+            "display-serif-accent": ["'Playfair Display'", "serif"]
+          },
+          fontSize: {
+            "display-hero": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "700" }],
+            "display-hero-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "display-serif-accent": ["72px", { lineHeight: "80px", letterSpacing: "-0.02em", fontWeight: "500" }],
+            "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "headline-xl-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "500" }],
+            "body-md": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "500" }],
+            "body-sm": ["14px", { lineHeight: "22px", letterSpacing: "0.005em", fontWeight: "600" }],
+            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600" }],
+            "label-mono": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#0E1116] font-sans text-[#F5F7FA] antialiased selection:bg-[#F5B921] selection:text-[#0E1116] relative overflow-x-hidden min-h-screen">
+
+  <!-- Atmospheric Background Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-16 -right-20 w-[950px] h-[750px] pointer-events-none opacity-24 mix-blend-screen animate-pulse-glow" style="border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(-25deg); background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 55%, transparent 80%); filter: blur(125px);"></div>
+    <div class="absolute top-[22%] -left-36 w-[900px] h-[720px] pointer-events-none opacity-22 mix-blend-screen" style="border-radius: 58% 42% 38% 62% / 54% 36% 64% 46%; transform: rotate(35deg); background: linear-gradient(125deg, #60A5FA 10%, #3B82F6 60%, transparent 85%); filter: blur(130px);"></div>
+    <div class="absolute top-[44%] -right-28 w-[950px] h-[700px] pointer-events-none opacity-22 mix-blend-screen" style="border-radius: 46% 54% 63% 37% / 39% 58% 42% 61%; transform: rotate(-18deg); background: linear-gradient(140deg, #3B82F6 0%, #60A5FA 50%, transparent 80%); filter: blur(135px);"></div>
+    <div class="absolute top-[63%] -left-24 w-[980px] h-[780px] pointer-events-none opacity-20 mix-blend-screen" style="border-radius: 52% 48% 33% 67% / 62% 44% 56% 38%; transform: rotate(28deg); background: linear-gradient(130deg, #60A5FA 5%, #3B82F6 65%, transparent 85%); filter: blur(140px);"></div>
+    <div class="absolute bottom-4 right-[5%] w-[850px] h-[650px] pointer-events-none opacity-18 mix-blend-screen" style="border-radius: 48% 52% 59% 41% / 41% 63% 37% 59%; transform: rotate(-12deg); background: linear-gradient(135deg, #3B82F6 10%, #60A5FA 55%, transparent 80%); filter: blur(115px);"></div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 1: HOMEPAGE VIEW (#homeView)          -->
+  <!-- ========================================== -->
+  <div id="homeView" class="w-full relative z-10 transition-opacity duration-300">
+
+    <!-- Fixed Glass Header Chrome -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-space-md pointer-events-none px-margin md:px-margin-tablet lg:px-margin-desktop">
+      <div class="pointer-events-auto w-full max-w-7xl h-20 glass-panel shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-full px-space-md md:px-space-lg flex items-center justify-between transition-all duration-300 relative z-10">
+        
+        <!-- Left: Monogram Badge & Title -->
+        <a href="#" onclick="navigateToHome(''); return false;" class="flex items-center gap-space-sm md:gap-space-md group cursor-pointer">
+          <div class="w-10 h-10 rounded-full bg-[#F5B921] text-[#0E1116] flex items-center justify-center shrink-0 font-bold text-lg leading-none select-none group-hover:scale-105 transition-transform shadow-md">
+            <span>R</span>
+          </div>
+          <div class="flex flex-col justify-center select-none">
+            <span class="font-semibold text-sm md:text-base text-[#F5F7FA] tracking-tight leading-snug group-hover:text-[#F5B921] transition-colors">Rajakumar M</span>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#B4BCC8] hidden sm:block">Creative Lead | Brand, Digital &amp; Motion Design</span>
+          </div>
+        </a>
+
+        <!-- Center Nav Links -->
+        <nav class="hidden lg:flex items-center gap-1 p-1 bg-[#0E1116]/80 border border-white/10 rounded-full backdrop-blur-md">
+          <a class="nav-link px-space-md py-space-sm text-[#F5F7FA] font-semibold text-sm rounded-full transition-all hover:bg-white/5" href="#work" onclick="navigateToHome('work'); return false;">Work</a>
+          <a class="nav-link px-space-md py-space-sm text-[#B4BCC8] hover:text-[#F5F7FA] text-sm transition-colors rounded-full hover:bg-white/5" href="#about" onclick="navigateToHome('about'); return false;">About</a>
+          <a class="nav-link px-space-md py-space-sm text-[#B4BCC8] hover:text-[#F5F7FA] text-sm transition-colors rounded-full hover:bg-white/5" href="#experience" onclick="navigateToHome('experience'); return false;">Experience</a>
+          <a class="nav-link px-space-md py-space-sm text-[#B4BCC8] hover:text-[#F5F7FA] text-sm transition-colors rounded-full hover:bg-white/5" href="#skills" onclick="navigateToHome('skills'); return false;">Skills</a>
+          <a class="nav-link px-space-md py-space-sm text-[#B4BCC8] hover:text-[#F5F7FA] text-sm transition-colors rounded-full hover:bg-white/5" href="#contact" onclick="navigateToHome('contact'); return false;">Contact</a>
+        </nav>
+
+        <!-- Right: Let's Talk CTA & Mobile Trigger -->
+        <div class="flex items-center gap-space-sm md:gap-space-md">
+          <a class="min-h-[44px] inline-flex items-center justify-center px-space-md md:px-space-lg py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-[12px] uppercase tracking-wider font-bold hover:bg-[#e6ab18] active:scale-95 transition-all shadow-md" href="#contact" onclick="navigateToHome('contact'); return false;">LET'S TALK</a>
+          
+          <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B4BCC8] hover:text-[#F5F7FA] transition-colors" aria-label="Toggle Navigation">
+            <span class="material-symbols-outlined text-[22px]">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation Overlay -->
+    <div id="mobileMenuDrawer" class="fixed inset-0 z-[60] bg-[#0E1116]/95 backdrop-blur-xl hidden flex-col items-center justify-center gap-6 p-8 transition-all duration-300">
+      <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 w-12 h-12 rounded-full glass-panel flex items-center justify-center text-[#F5F7FA]" aria-label="Close menu">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="flex flex-col items-center gap-5 text-center">
+        <div class="w-16 h-16 rounded-full bg-[#F5B921] text-[#0E1116] flex items-center justify-center font-bold text-2xl mb-2">R</div>
+        <span class="text-xl font-bold text-[#F5F7FA]">Rajakumar M</span>
+        <span class="text-xs uppercase tracking-wider text-[#B4BCC8]">Creative Lead | Brand, Digital &amp; Motion Design</span>
+        <div class="w-16 h-0.5 bg-white/10 my-2"></div>
+        <a href="#work" onclick="toggleMobileMenu(); navigateToHome('work');" class="text-lg font-semibold text-[#F5F7FA] py-2">Work &amp; Archives</a>
+        <a href="#about" onclick="toggleMobileMenu(); navigateToHome('about');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">About &amp; Leadership</a>
+        <a href="#experience" onclick="toggleMobileMenu(); navigateToHome('experience');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Career History</a>
+        <a href="#skills" onclick="toggleMobileMenu(); navigateToHome('skills');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Software Stack</a>
+        <a href="#contact" onclick="toggleMobileMenu(); navigateToHome('contact');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Contact &amp; Inquiries</a>
+        <a href="#contact" onclick="toggleMobileMenu(); navigateToHome('contact');" class="mt-4 px-8 py-3 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm uppercase tracking-wider">LET'S TALK</a>
+      </div>
+    </div>
+
+    <!-- MAIN HOMEPAGE CONTENT -->
+    <main class="w-full pb-12 bg-transparent min-h-screen relative z-10">
+      
+      <!-- HERO SECTION -->
+      <section id="hero" class="relative w-full max-w-7xl mx-auto px-6 lg:px-12 pt-28 lg:pt-36 pb-12 lg:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Left Text Column (6 cols) -->
+        <div class="lg:col-span-6 relative z-10 flex flex-col justify-center items-start gap-6">
+          
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] select-none">
+            <span class="relative flex h-2.5 w-2.5 shrink-0">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10B981]"></span>
+            </span>
+            <span class="text-[11px] sm:text-[12px] font-bold uppercase tracking-wider text-[#F5F7FA] whitespace-normal sm:whitespace-nowrap leading-none">Open to senior creative leadership roles</span>
+          </div>
+
+          <!-- Overline Archive Date Label in Amber Gold -->
+          <div class="flex items-center gap-space-sm flex-wrap">
+            <span class="px-space-sm py-1 rounded-full glass-panel text-[12px] font-semibold text-[#F5B921] uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#F5B921]"></span> EXECUTIVE MONOGRAPH
+            </span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#B4BCC8]"></span>
+            <span class="text-[12px] font-semibold text-[#F5B921]">2001 — Present</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-headline-xl text-4xl sm:text-5xl lg:text-[54px] xl:text-[60px] lg:leading-[1.14] xl:leading-[1.12] text-[#F5F7FA] tracking-tight font-extrabold">
+            Designing Ideas into 
+            <span class="font-serif italic font-normal text-[#F5B921]">Meaningful</span>
+            Experiences.
+          </h1>
+
+          <!-- Bio Summary -->
+          <p class="text-base md:text-lg text-[#B4BCC8] max-w-xl leading-relaxed">
+            Creative design leader with <span class="text-[#F5F7FA] font-semibold underline decoration-[#3B82F6] underline-offset-4">20+ years of experience</span> across brand architecture, high-conversion UI/UX, enterprise design systems, motion graphics, and generative AI creative pipelines.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+            <a class="min-h-[44px] inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full bg-[#F5B921] text-[#0E1116] text-base font-bold hover:bg-[#e6ab18] active:scale-95 transition-all shadow-md group" href="#work">
+              <span>View Selected Work</span>
+              <span class="material-symbols-outlined text-[20px] group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
+            </a>
+            <button onclick="openMonographModal()" class="min-h-[44px] inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full glass-panel text-[#F5F7FA] hover:border-[#3B82F6] text-base font-medium active:scale-95 transition-all shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] cursor-pointer group">
+              <span class="material-symbols-outlined text-[20px] text-[#F5B921] group-hover:scale-110 transition-transform">mail</span>
+              <span>Request CV by Email</span>
+            </button>
+          </div>
+
+          <!-- Metrics Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-md w-full">
+            <div class="glass-panel p-space-md rounded-xl flex flex-col justify-between shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-white/20 transition-all">
+              <span class="text-3xl lg:text-4xl font-extrabold text-[#F5B921] leading-none">20+</span>
+              <div class="mt-space-sm">
+                <p class="text-sm font-semibold text-[#F5F7FA]">Years Practice</p>
+                <p class="text-xs text-[#B4BCC8] mt-0.5">Enterprise &amp; Agency</p>
+              </div>
+            </div>
+            <div class="glass-panel p-space-md rounded-xl flex flex-col justify-between shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-white/20 transition-all">
+              <span class="text-3xl lg:text-4xl font-extrabold text-[#F5F7FA] leading-none">135k+</span>
+              <div class="mt-space-sm">
+                <p class="text-sm font-semibold text-[#F5F7FA]">Initiative Reach</p>
+                <p class="text-xs text-[#B4BCC8] mt-0.5">Infosys Design Thinking</p>
+              </div>
+            </div>
+            <div class="glass-panel p-space-md rounded-xl flex flex-col justify-between shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-white/20 transition-all">
+              <span class="text-3xl lg:text-4xl font-extrabold text-[#F5F7FA] leading-none">Global</span>
+              <div class="mt-space-sm">
+                <p class="text-sm font-semibold text-[#F5F7FA]">Cross-Continental</p>
+                <p class="text-xs text-[#B4BCC8] mt-0.5">US, UK, DE, JP Teams</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Portrait Column: rounded editorial image (source JPEG retained) -->
+        <div class="lg:col-span-6 relative z-10 w-full flex items-center justify-center lg:justify-end">
+          <div class="relative w-full max-w-[480px] flex items-center justify-center lg:justify-end">
+            <!-- Ambient cobalt-blue background glow behind the card -->
+            <div class="absolute -inset-4 sm:-inset-6 bg-[#3B82F6]/20 blur-[90px] md:blur-[110px] rounded-[36px] -z-10 pointer-events-none" aria-hidden="true"></div>
+            <figure class="hero-portrait-frame">
+              <img src="Hero_Portrait.jpeg"
+                   alt="Rajakumar M, creative design leader"
+                   width="1122" height="1229"
+                   fetchpriority="high" decoding="async" />
+              <figcaption class="absolute bottom-4 right-4 z-20 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-panel text-xs font-semibold text-[#F5F7FA] border border-white/10 shadow-lg backdrop-blur-md select-none">
+                <span class="material-symbols-outlined text-[#F5B921] text-[16px]" aria-hidden="true">location_on</span>
+                <span>Bengaluru, India</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- SECTION: SELECTED WORK & ARCHIVES (#work) -->
+      <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl" id="work">
+        
+        <!-- Header with Prominent "View all work" Link -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg border-b border-white/10">
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-xs">
+              <span class="w-2.5 h-2.5 bg-[#F5B921] rounded-full animate-pulse"></span>
+              <span class="text-[12px] font-bold uppercase tracking-widest text-[#F5B921]">Curated Portfolios</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-[#F5F7FA] tracking-tight">Selected Work &amp; Archives</h2>
+          </div>
+            <a class="min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#F5B921] text-[#0E1116] text-sm md:text-base font-bold hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] active:scale-95 transition-all shadow-md group" href="https://www.behance.net/rajamet" target="_blank" rel="noopener noreferrer">
+              <span>View all work on Behance</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">open_in_new</span>
+            </a>
+            <span class="text-white/20 hidden sm:inline">|</span>
+            <span class="px-space-md py-space-xs rounded-full glass-panel text-xs font-semibold text-[#B4BCC8]">06 Specialized Domains</span>
+          </div>
+        </div>
+
+        <!-- Interactive Filter Pills Bar -->
+        <div class="flex items-center gap-space-xs overflow-x-auto py-space-md scrollbar-none" id="categoryFilterContainer">
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold transition-all shadow-sm cursor-pointer" onclick="filterPortfolio('all', this)">All Folders</button>
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer" onclick="filterPortfolio('uiux', this)">UI/UX &amp; Web</button>
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer" onclick="filterPortfolio('motion', this)">Motion &amp; Video</button>
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer" onclick="filterPortfolio('branding', this)">Brand &amp; Campaigns</button>
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer" onclick="filterPortfolio('elearning', this)">eLearning &amp; Animation</button>
+          <button class="portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer" onclick="filterPortfolio('ai', this)">AI Workflows</button>
+        </div>
+
+        <!-- Bento Masonry Folder Grid (6 Category Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg pt-space-xs" id="portfolioFolderGrid">
+          
+          <!-- Folder 1: UI/UX & Web -->
+          <div onclick="openCategory('uiux')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="uiux">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 01</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">devices</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Figma</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Web Architecture</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Design Systems</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">UI/UX &amp; Web Interfaces</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Enterprise design systems, interactive prototypes, and conversion portals.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">14 Archived Projects</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 2: Motion Graphics & Video Editing -->
+          <div onclick="openCategory('motion')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="motion">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 02</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">movie</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">After Effects</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Premiere Pro</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Kinetic Story</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">Motion &amp; Video Direction</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Cinematic brand films, 3D broadcast packages, and keynotes.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">28 Video Deliverables</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 3: Brand Identity & Campaigns -->
+          <div onclick="openCategory('branding')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="branding">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 03</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Brand Systems</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Event Visuals</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Global Guidelines</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">Brand Systems &amp; Campaigns</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Multi-continental identity manuals, retail launches, and spatial design.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">19 Brand Case Studies</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 4: eLearning & Interactive Animation -->
+          <div onclick="openCategory('elearning')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="elearning">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 04</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">psychology</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Adobe Animate</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Captivate</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Gamified Modules</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">eLearning &amp; Interactive</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Pedagogical curriculum architecture and gamified testing engines.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">32 Modules Developed</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 5: AI-Powered Creative Workflows -->
+          <div onclick="openCategory('ai')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="ai">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 05</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">neurology</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Midjourney v6</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Synthesia &amp; HeyGen</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Prompt Systems</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">AI Creative Pipelines</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Generative synthetic video, prompt governance, and rapid asset staging.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">8 Workflow Frameworks</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 6: Executive Presentations & Infographics -->
+          <div onclick="openCategory('executive')" class="portfolio-card reveal-card group flex flex-col justify-between glass-panel hover:border-[#3B82F6] rounded-2xl p-space-lg transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-1.5 relative overflow-hidden min-h-[260px] cursor-pointer" data-cat="all">
+            <div>
+              <div class="flex items-center justify-between pb-space-sm">
+                <span class="text-xs text-[#F5B921] font-bold tracking-wider">DIR / 06</span>
+                <div class="w-10 h-10 rounded-full bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#B4BCC8] group-hover:text-[#F5B921] group-hover:border-[#F5B921]/40 transition-all">
+                  <span class="material-symbols-outlined text-[20px]">analytics</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 my-space-sm">
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Staffbase</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Executive Keynotes</span>
+                <span class="px-2 py-0.5 rounded bg-[#0E1116]/60 border border-white/10 text-[#B4BCC8] text-xs">Data Narratives</span>
+              </div>
+              <h3 class="text-2xl font-bold pt-2 pb-1 tracking-tight text-[#F5F7FA] group-hover:text-[#F5B921] transition-colors">Executive Presentation &amp; Comms</h3>
+              <p class="text-xs text-[#B4BCC8] line-clamp-2 mt-1">Boardroom slide systems, investor keynotes, and enterprise intranets.</p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/10 mt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">45+ Decks Executed</span>
+              <div class="w-9 h-9 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] shadow-sm transition-transform duration-200 group-hover:scale-110 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEATURED LANDMARK CASE STUDY (Infosys Enterprise Design Thinking) -->
+      <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+        <div class="relative overflow-hidden rounded-3xl glass-panel p-space-lg md:p-space-xl shadow-[0_20px_50px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.08)]">
+          <!-- Clean Understated Amber Accent Stripe -->
+          <div class="absolute top-0 left-0 bottom-0 w-2.5 bg-[#F5B921]"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+            
+            <!-- Left Content (8 cols) -->
+            <div class="lg:col-span-8 flex flex-col gap-space-md pl-3 sm:pl-4">
+              <div class="flex items-center gap-space-sm flex-wrap">
+                <span class="px-space-md py-1 rounded-full bg-[#161B22]/80 border border-white/10 text-[#F5B921] text-[12px] uppercase tracking-wider font-bold">Featured Landmark Case Study</span>
+                <span class="text-xs font-semibold text-[#B4BCC8] tracking-widest">INFOSYS LIMITED</span>
+              </div>
+              <h3 class="text-3xl md:text-5xl font-extrabold text-[#F5F7FA] tracking-tight leading-tight">
+                Infosys Enterprise Design Thinking Initiative
+              </h3>
+              <p class="text-base text-[#B4BCC8] max-w-2xl leading-relaxed">
+                Sole creative resource for Infosys' enterprise-wide Design Thinking initiative. Led end-to-end visual design and learning collateral, from the inaugural session through program completion. Infosys reported the initiative benefited 135,000+ participants.
+              </p>
+              
+              <!-- 3 Stat Callouts and Labels -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+                <div class="bg-[#0E1116]/65 border border-white/10 p-space-md rounded-xl backdrop-blur-sm">
+                  <span class="text-3xl font-extrabold text-[#F5B921] block">135K+</span>
+                  <span class="text-xs text-[#B4BCC8] mt-1 block">Participants (Infosys-reported)</span>
+                </div>
+                <div class="bg-[#0E1116]/65 border border-white/10 p-space-md rounded-xl backdrop-blur-sm">
+                  <span class="text-3xl font-extrabold text-[#F5F7FA] block">End-to-End</span>
+                  <span class="text-xs text-[#B4BCC8] mt-1 block">Visual Design</span>
+                </div>
+                <div class="bg-[#0E1116]/65 border border-white/10 p-space-md rounded-xl backdrop-blur-sm">
+                  <span class="text-3xl font-extrabold text-[#F5F7FA] block">Sole</span>
+                  <span class="text-xs text-[#B4BCC8] mt-1 block">Creative Resource</span>
+                </div>
+              </div>
+              
+              <div class="pt-space-sm">
+                <a class="min-h-[44px] inline-flex items-center gap-space-sm px-space-xl py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold hover:bg-[#e6ab18] transition-all shadow-md active:scale-95" href="#contact" onclick="prefillContactForm('Design Thinking &amp; Enterprise eLearning');">
+                  <span>Request Detailed Case Study Archive</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Visual Showcase Component (4 cols) -->
+            <div class="lg:col-span-4 glass-panel-subtle rounded-2xl p-space-md flex flex-col gap-space-sm border border-white/10">
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/10">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">Framework Deliverables</span>
+                <span class="text-[12px] text-[#F5B921] font-semibold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-[#F5B921]"></span>
+                  AUTHENTICATED
+                </span>
+              </div>
+              <div class="space-y-space-xs">
+                <div class="flex items-center justify-between p-space-xs rounded-lg glass-panel">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#F5B921] text-[18px]">menu_book</span>
+                    <span class="text-xs font-medium text-[#F5F7FA]">Curriculum Master Guide</span>
+                  </div>
+                  <span class="text-[11px] text-[#B4BCC8] bg-[#0E1116]/80 px-2 py-0.5 rounded border border-white/10">184 Pages</span>
+                </div>
+                <div class="flex items-center justify-between p-space-xs rounded-lg glass-panel">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#F5B921] text-[18px]">dashboard_customize</span>
+                    <span class="text-xs font-medium text-[#F5F7FA]">Design Sprint Workbooks</span>
+                  </div>
+                  <span class="text-[11px] text-[#B4BCC8] bg-[#0E1116]/80 px-2 py-0.5 rounded border border-white/10">Interactive PDF</span>
+                </div>
+                <div class="flex items-center justify-between p-space-xs rounded-lg glass-panel">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#F5B921] text-[18px]">play_circle</span>
+                    <span class="text-xs font-medium text-[#F5F7FA]">Video Explainer Suite</span>
+                  </div>
+                  <span class="text-[11px] text-[#B4BCC8] bg-[#0E1116]/80 px-2 py-0.5 rounded border border-white/10">12 Chapters</span>
+                </div>
+                <div class="flex items-center justify-between p-space-xs rounded-lg glass-panel">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#F5B921] text-[18px]">military_tech</span>
+                    <span class="text-xs font-medium text-[#F5F7FA]">Certification Badging</span>
+                  </div>
+                  <span class="text-[11px] text-[#B4BCC8] bg-[#0E1116]/80 px-2 py-0.5 rounded border border-white/10">4 Proficiency Levels</span>
+                </div>
+              </div>
+              <div class="p-space-xs rounded bg-white/5 border-l-2 border-[#F5B921] text-[#B4BCC8] text-[12px] leading-relaxed mt-1">
+                "A masterclass in synthesizing complex human-centered design frameworks into universally intuitive enterprise graphics."
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT & EXPERIENCE SPLIT-SCREEN (#about & #experience) -->
+      <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl" id="experience">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-gutter-desktop items-start">
+          
+          <!-- Left Column: Leadership Narrative & Honors (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-space-lg" id="about">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2.5 h-2.5 bg-[#F5B921] rounded-full"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#F5B921]">About &amp; Leadership</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-extrabold text-[#F5F7FA] tracking-tight leading-tight">
+                Two decades of creative direction across global enterprise.
+              </h2>
+            </div>
+            
+            <p class="text-base text-[#B4BCC8] leading-relaxed">
+              I bridge business strategy and editorial aesthetics. Having led high-performing creative hubs for Fortune 500 organizations, my leadership style champions cross-cultural agility—unifying design teams across North America, Europe, and Asia-Pacific.
+            </p>
+            <p class="text-base text-[#B4BCC8] leading-relaxed">
+              From institutional brand governance to fast-paced agile product cycles, I instill a standard of visual discipline where typography, proportion, and motion create measurable impact.
+            </p>
+
+            <!-- Recognition Badges -->
+            <div class="flex flex-col gap-space-sm pt-space-xs">
+              <span class="text-xs font-bold uppercase tracking-widest text-[#F5F7FA]">Honors &amp; Career Recognition</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                <div class="glass-panel p-space-md rounded-xl flex items-start gap-space-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <span class="text-2xl leading-none shrink-0">🏆</span>
+                  <div>
+                    <p class="text-sm font-bold text-[#F5F7FA]">3x Concentrix Awards</p>
+                    <p class="text-xs text-[#B4BCC8] mt-0.5">Performance Excellence Cash Awards</p>
+                  </div>
+                </div>
+                <div class="glass-panel p-space-md rounded-xl flex items-start gap-space-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <span class="text-2xl leading-none shrink-0">🎖️</span>
+                  <div>
+                    <p class="text-sm font-bold text-[#F5F7FA]">4x Infosys Unit Awards</p>
+                    <p class="text-xs text-[#B4BCC8] mt-0.5">Design &amp; Training Excellence</p>
+                  </div>
+                </div>
+                <div class="glass-panel p-space-md rounded-xl flex items-start gap-space-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <span class="text-2xl leading-none shrink-0">⭐</span>
+                  <div>
+                    <p class="text-sm font-bold text-[#F5F7FA]">Target CEO Trophy</p>
+                    <p class="text-xs text-[#B4BCC8] mt-0.5">Certificate of Accomplishment</p>
+                  </div>
+                </div>
+                <div class="glass-panel p-space-md rounded-xl flex items-start gap-space-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <span class="text-2xl leading-none shrink-0">🏅</span>
+                  <div>
+                    <p class="text-sm font-bold text-[#F5F7FA]">Target Q1 Award</p>
+                    <p class="text-xs text-[#B4BCC8] mt-0.5">Interactive Design Excellence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Chronological Timeline (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col gap-space-md">
+            <div class="flex items-center justify-between pb-space-xs border-b border-white/10">
+              <span class="text-xs font-bold uppercase tracking-widest text-[#B4BCC8]">Career Trajectory</span>
+              <span class="text-xs font-semibold text-[#F5B921]">2007 — Present</span>
+            </div>
+            
+            <!-- Vertical Timeline Items -->
+            <div class="space-y-space-md relative before:absolute before:left-3 before:top-4 before:bottom-4 before:w-0.5 before:bg-white/10 pl-8">
+              
+              <!-- Timeline Card 1: Concentrix Mgr II -->
+              <div class="relative glass-panel rounded-2xl p-space-md md:p-space-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#3B82F6]/50 transition-colors">
+                <span class="absolute -left-[38px] top-6 w-3.5 h-3.5 rounded-full bg-[#F5B921] ring-4 ring-[#0E1116]"></span>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-[#F5B921] text-[#0E1116] text-[11px] font-bold">Mar 2023 — Present</span>
+                  <span class="text-xs text-[#B4BCC8]">Bengaluru, India</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#F5F7FA] pt-1">Manager II – Global Creative Services</h3>
+                <p class="text-sm font-semibold text-[#F5B921]">Concentrix · Creative Lead | Brand, Digital &amp; Motion Design</p>
+                <p class="text-sm text-[#B4BCC8] pt-space-xs leading-relaxed">Spearheaded worldwide creative design strategy and brand governance. Led multidisciplinary teams of art directors, motion designers, and copywriters to build high-converting global campaigns and digital assets.</p>
+              </div>
+
+              <!-- Timeline Card 2: Concentrix Mgr I -->
+              <div class="relative glass-panel rounded-2xl p-space-md md:p-space-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#3B82F6]/50 transition-colors">
+                <span class="absolute -left-[38px] top-6 w-3.5 h-3.5 rounded-full bg-[#3B82F6] ring-4 ring-[#0E1116]"></span>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-[#0E1116]/80 text-[#B4BCC8] border border-white/10 text-[11px] font-semibold">May 2021 — Mar 2023</span>
+                  <span class="text-xs text-[#B4BCC8]">Bengaluru, India</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#F5F7FA] pt-1">Manager I – Global Research &amp; Analytics</h3>
+                <p class="text-sm font-semibold text-[#B4BCC8]">Concentrix</p>
+                <p class="text-sm text-[#B4BCC8] pt-space-xs leading-relaxed">Pioneered visual analytics storytelling frameworks. Transformed intricate quantitative datasets into actionable executive dashboards, boardroom infographics, and strategic insight portals.</p>
+              </div>
+
+              <!-- Timeline Card 3: Pace Marketing Solutions -->
+              <div class="relative glass-panel rounded-2xl p-space-md md:p-space-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#3B82F6]/50 transition-colors">
+                <span class="absolute -left-[38px] top-6 w-3.5 h-3.5 rounded-full bg-[#B4BCC8] ring-4 ring-[#0E1116]"></span>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-[#0E1116]/80 text-[#B4BCC8] border border-white/10 text-[11px] font-semibold">Oct 2020 — Apr 2021</span>
+                  <span class="text-xs text-[#B4BCC8]">Bengaluru, India</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#F5F7FA] pt-1">Art Director</h3>
+                <p class="text-sm font-semibold text-[#B4BCC8]">Pace Marketing Solutions</p>
+                <p class="text-sm text-[#B4BCC8] pt-space-xs leading-relaxed">Directed visual identities, omni-channel retail launches, packaging design, and performance marketing collateral for diverse consumer and B2B clients.</p>
+              </div>
+
+              <!-- Timeline Card 4: Infosys -->
+              <div class="relative glass-panel rounded-2xl p-space-md md:p-space-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#3B82F6]/50 transition-colors">
+                <span class="absolute -left-[38px] top-6 w-3.5 h-3.5 rounded-full bg-[#B4BCC8] ring-4 ring-[#0E1116]"></span>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-[#0E1116]/80 text-[#B4BCC8] border border-white/10 text-[11px] font-semibold">Aug 2014 — Jul 2020</span>
+                  <span class="text-xs text-[#B4BCC8]">Mysuru &amp; Bengaluru</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#F5F7FA] pt-1">Lead – Education, Training &amp; Assessment</h3>
+                <p class="text-sm font-semibold text-[#B4BCC8]">Infosys Limited</p>
+                <p class="text-sm text-[#B4BCC8] pt-space-xs leading-relaxed">Creative lead for flagship enterprise learning curricula. Directed visual design, interactive simulators, and gamified testing architectures, including the enterprise Design Thinking rollout.</p>
+              </div>
+
+              <!-- Timeline Card 5: Target Corporation -->
+              <div class="relative glass-panel rounded-2xl p-space-md md:p-space-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#3B82F6]/50 transition-colors">
+                <span class="absolute -left-[38px] top-6 w-3.5 h-3.5 rounded-full bg-[#B4BCC8] ring-4 ring-[#0E1116]"></span>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-[#0E1116]/80 text-[#B4BCC8] border border-white/10 text-[11px] font-semibold">Jul 2007 — Aug 2014</span>
+                  <span class="text-xs text-[#B4BCC8]">Bengaluru, India</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#F5F7FA] pt-1">Senior Specialist – Interactive</h3>
+                <p class="text-sm font-semibold text-[#B4BCC8]">Target Corporation India</p>
+                <p class="text-sm text-[#B4BCC8] pt-space-xs leading-relaxed">Crafted rich interactive digital campaign experiences for Target US seasonal promotions. Produced high-fidelity rich media ads, interactive web widgets, and animated marketing components.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: TECHNICAL REPERTOIRE & SOFTWARE STACK (#skills) -->
+      <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl" id="skills">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg border-b border-white/10">
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-xs">
+              <span class="w-2.5 h-2.5 bg-[#F5B921] rounded-full"></span>
+              <span class="text-xs font-bold uppercase tracking-widest text-[#F5B921]">Technical Repertoire</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-[#F5F7FA] tracking-tight">Creative Toolkit &amp; Software Stack</h2>
+          </div>
+          <p class="text-sm text-[#B4BCC8] max-w-md">
+            Battle-tested design tools, production suites, and emerging generative AI pipelines honed across two decades of execution.
+          </p>
+        </div>
+
+        <!-- 3x2 Matrix of Frosted Glass Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md pt-space-lg">
+          
+          <!-- Group 1: Graphic & Brand Design -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">palette</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Brand &amp; Graphic Design</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">Core suites for print, vectors, corporate literature, and editorial collateral.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Photoshop</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Illustrator</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">InDesign</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Canva Pro</span>
+            </div>
+          </div>
+
+          <!-- Group 2: Motion & Video Editing -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">video_settings</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Motion &amp; Video Editing</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">Dynamic visual storytelling, post-production, audio synch, and kinetic type.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">After Effects</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Premiere Pro</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Adobe Animate</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Audition</span>
+            </div>
+          </div>
+
+          <!-- Group 3: UI/UX & Interaction -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">touch_app</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">UI/UX &amp; Prototyping</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">Wireframing, clickable high-fidelity prototypes, and component libraries.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Figma</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Sketch</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">UXPin</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Balsamiq</span>
+            </div>
+          </div>
+
+          <!-- Group 4: Generative AI Pipelines -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Generative AI Workflows</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">Next-generation synthetic media, rapid prototyping, and AI avatar video.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Midjourney</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Synthesia</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">HeyGen</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Higgsfield / Kling</span>
+            </div>
+          </div>
+
+          <!-- Group 5: Enterprise Internal Publishing -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">mark_email_unread</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Email &amp; Comms Publishing</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">Enterprise employee intranet design, newsletter engines, and global alerts.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Staffbase</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">HTML/CSS Email</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">SharePoint UI</span>
+            </div>
+          </div>
+
+          <!-- Group 6: Core Leadership Competencies -->
+          <div class="skill-card reveal-card glass-panel p-space-lg rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col justify-between group hover:border-[#3B82F6] transition-all">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0E1116]/80 border border-white/10 flex items-center justify-center text-[#F5B921] mb-space-md transition-colors">
+                <span class="material-symbols-outlined text-[20px]">hub</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Core Disciplines</h3>
+              <p class="text-sm text-[#B4BCC8] pt-space-xs pb-space-md">High-altitude strategic responsibilities driving team performance and client buy-in.</p>
+            </div>
+            <div class="flex flex-wrap gap-space-xs pt-space-xs">
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Art Direction</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Global Team Mentorship</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Design Thinking</span>
+              <span class="px-space-sm py-1 rounded bg-[#0E1116]/70 border border-white/10 text-xs font-medium text-[#B4BCC8]">Pitch Leadership</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CLOSING FINALE CONTACT SECTION (#contact) -->
+      <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-3xl relative" id="contact">
+        <!-- Soft ambient amber glow behind the card -->
+        <div class="absolute inset-x-8 inset-y-12 rounded-3xl pointer-events-none -z-10" style="background: rgba(245, 185, 33, 0.12); filter: blur(70px);"></div>
+        
+        <div class="relative overflow-hidden rounded-3xl p-space-xl md:p-space-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-[14px]" style="background: linear-gradient(135deg, rgba(245, 185, 33, 0.12) 0%, rgba(22, 27, 34, 0.65) 50%, rgba(59, 130, 246, 0.08) 100%), rgba(22, 27, 34, 0.55); border: 1px solid rgba(245, 185, 33, 0.35); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+            
+            <!-- Left Inquiry Header & Direct Comms (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-space-md">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#F5B921]"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#F5B921]">Direct Inquiry &amp; Consultation</span>
+              </div>
+              <h2 class="text-3xl md:text-5xl font-extrabold text-[#F5F7FA] tracking-tight leading-tight">
+                Let's build impactful design solutions <span class="font-serif italic font-normal text-[#F5B921]">together</span>.
+              </h2>
+              <p class="text-base text-[#B4BCC8] max-w-xl leading-relaxed">
+                Whether you are building a new enterprise design group, scaling global creative operations, or seeking high-level brand direction, my inbox is open.
+              </p>
+
+              <!-- Contact Action Badges -->
+              <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-space-sm pt-space-xs">
+                
+                <!-- Email Direct Card with Copy Action -->
+                <div class="min-h-[44px] flex items-center gap-space-xs bg-[#0E1116]/80 backdrop-blur-md border border-white/10 px-space-md py-space-sm rounded-full shadow-sm hover:border-[#3B82F6] transition-all">
+                  <span class="material-symbols-outlined text-[#F5B921] text-[20px]">mail</span>
+                  <a href="mailto:rajamet@gmail.com" class="text-sm font-semibold text-[#F5F7FA] hover:text-[#3B82F6] transition-colors" id="emailAddressText">rajamet@gmail.com</a>
+                  <button class="ml-space-xs p-1.5 rounded-full hover:bg-white/10 text-[#B4BCC8] hover:text-[#F5F7FA] transition-colors flex items-center justify-center cursor-pointer" onclick="copyEmailToClipboard()" title="Copy email address" aria-label="Copy email">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone Direct -->
+                <a class="min-h-[44px] flex items-center gap-space-xs bg-[#0E1116]/80 backdrop-blur-md border border-white/10 px-space-md py-space-sm rounded-full shadow-sm hover:border-[#3B82F6] hover:bg-[#161B22] transition-all text-[#F5F7FA]" href="tel:+919035352020">
+                  <span class="material-symbols-outlined text-[#F5B921] text-[20px]">call</span>
+                  <span class="text-sm font-semibold text-[#F5F7FA]">+91 9035352020</span>
+                </a>
+              </div>
+
+              <!-- Verified Social Profiles -->
+              <div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#B4BCC8]">Profiles:</span>
+                <a class="min-h-[44px] inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-[#0E1116]/80 backdrop-blur-md border border-white/10 text-[#B4BCC8] text-xs font-medium hover:border-[#3B82F6] hover:text-[#F5F7FA] transition-all" href="https://www.linkedin.com/in/rajha2020" rel="noopener noreferrer" target="_blank">
+                  <span>LinkedIn / rajha2020</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+                <a class="min-h-[44px] inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-[#0E1116]/80 backdrop-blur-md border border-white/10 text-[#B4BCC8] text-xs font-medium hover:border-[#3B82F6] hover:text-[#F5F7FA] transition-all" href="https://www.behance.net/rajamet" rel="noopener noreferrer" target="_blank">
+                  <span>Behance / rajamet</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Dispatch Form (5 cols) in frosted dark glass -->
+            <div class="lg:col-span-5 glass-panel-subtle rounded-2xl p-space-lg shadow-md flex flex-col gap-space-sm border border-white/10">
+              <h3 class="text-xl font-bold text-[#F5F7FA]">Start a Dialogue</h3>
+              <p class="text-xs text-[#B4BCC8]">Direct communication channel for executive creative leadership and strategic partnerships.</p>
+              
+              <form class="flex flex-col gap-space-sm pt-space-xs" id="contactForm" onsubmit="handleInquirySubmit(event)">
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-widest text-[#B4BCC8] mb-1">Your Name</label>
+                  <input class="w-full px-space-md py-space-sm rounded-lg bg-[#0E1116]/70 backdrop-blur-md border border-white/10 text-sm text-[#F5F7FA] placeholder-[#B4BCC8]/60 focus:outline-none focus:border-[#3B82F6] transition-all" placeholder="Elena Rostova" required type="text" name="name">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-widest text-[#B4BCC8] mb-1">Email Address</label>
+                  <input class="w-full px-space-md py-space-sm rounded-lg bg-[#0E1116]/70 backdrop-blur-md border border-white/10 text-sm text-[#F5F7FA] placeholder-[#B4BCC8]/60 focus:outline-none focus:border-[#3B82F6] transition-all" placeholder="elena@enterprise.com" required type="email" name="email">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-widest text-[#B4BCC8] mb-1">Project Scope / Engagement Type</label>
+                  <select id="projectScopeSelect" class="w-full px-space-md py-space-sm rounded-lg bg-[#0E1116]/90 backdrop-blur-md border border-white/10 text-sm text-[#F5F7FA] focus:outline-none focus:border-[#3B82F6] transition-all" name="scope">
+                    <option class="bg-[#161B22] text-[#F5F7FA]" value="Full-Time Creative Leadership / Creative Lead">Full-Time Creative Leadership / Creative Lead</option>
+                    <option class="bg-[#161B22] text-[#F5F7FA]" value="Brand Identity Architecture &amp; Refresh">Brand Identity Architecture &amp; Refresh</option>
+                    <option class="bg-[#161B22] text-[#F5F7FA]" value="Design Thinking &amp; Enterprise eLearning">Design Thinking &amp; Enterprise eLearning</option>
+                    <option class="bg-[#161B22] text-[#F5F7FA]" value="AI-Powered Workflow Integration">AI-Powered Workflow Integration</option>
+                    <option class="bg-[#161B22] text-[#F5F7FA]" value="Executive Presentation &amp; Keynote Design">Executive Presentation &amp; Keynote Design</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-widest text-[#B4BCC8] mb-1">Message Details</label>
+                  <textarea id="messageDetailsArea" class="w-full px-space-md py-space-sm rounded-lg bg-[#0E1116]/70 backdrop-blur-md border border-white/10 text-sm text-[#F5F7FA] placeholder-[#B4BCC8]/60 focus:outline-none focus:border-[#3B82F6] transition-all resize-none" placeholder="Brief outline of your vision, timeline, and deliverables..." required rows="3" name="message"></textarea>
+                </div>
+                <div id="contactFormStatus" class="hidden"></div>
+                <button class="w-full min-h-[44px] mt-space-xs py-space-md rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] transition-all shadow-md active:scale-98 cursor-pointer" type="submit">
+                  Send Creative Inquiry →
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER FOR HOMEPAGE -->
+    <footer class="w-full bg-[#0E1116] border-t border-white/10 relative z-10">
+      <div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-7 h-7 rounded-full bg-[#F5B921] flex items-center justify-center font-bold text-xs text-[#0E1116]">
+              <span>R</span>
+            </div>
+            <span class="font-bold text-base text-[#F5F7FA] tracking-tight">Rajakumar M</span>
+          </div>
+          <p class="text-xs text-[#B4BCC8]">Bengaluru, Karnataka, India</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-space-lg text-center">
+          <span class="text-xs text-[#B4BCC8]">© 2026 Rajakumar M. All Rights Reserved.</span>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B4BCC8]">Creative Lead | Brand, Digital &amp; Motion Design</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- PAGE 2: CATEGORY ARCHIVE VIEW (#categoryView) -->
+  <!-- ========================================== -->
+  <div id="categoryView" class="hidden min-h-screen w-full relative z-10 transition-opacity duration-300">
+    
+    <!-- Sticky Glass Top Navigation Bar -->
+    <header class="sticky top-0 left-0 right-0 z-50 glass-panel border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+      <div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop h-20 flex items-center justify-between">
+        
+        <!-- Left: Prominent Back to Homepage Button -->
+        <button onclick="navigateToHome('work')" class="group min-h-[44px] inline-flex items-center justify-center gap-2.5 px-6 py-2.5 rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] active:scale-95 transition-all shadow-md cursor-pointer">
+          <span class="material-symbols-outlined text-[18px] text-[#0E1116] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          <span>Back to Homepage</span>
+        </button>
+
+        <!-- Center: Dynamic Category Badge -->
+        <div class="hidden sm:flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-white/10 select-none">
+          <span id="catViewNavIndex" class="text-xs font-bold text-[#F5B921]">DIR / 01</span>
+          <span class="text-white/20">·</span>
+          <span id="catViewNavTitle" class="text-xs font-semibold text-[#F5F7FA]">UI/UX &amp; Web Interfaces</span>
+        </div>
+
+        <!-- Right: Actions -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.behance.net/rajamet" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 text-xs text-[#B4BCC8] hover:text-[#F5F7FA] px-3 py-1.5 rounded-full hover:bg-white/5 transition-colors">
+            <span>Behance</span>
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+          </a>
+          <a href="#contact" onclick="navigateToHome('contact'); return false;" class="min-h-[40px] inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#F5B921] text-[#0E1116] text-xs uppercase tracking-wider font-bold hover:bg-[#e6ab18] transition-all shadow-md">
+            LET'S TALK
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Category Detail View Body -->
+    <main class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-10 pb-20">
+      
+      <!-- Category Banner Header -->
+      <section class="flex flex-col gap-6 pb-12 border-b border-white/10">
+        
+        <!-- Breadcrumbs & Directory Meta -->
+        <div class="flex items-center gap-3 flex-wrap">
+          <button onclick="navigateToHome('work')" class="text-xs font-bold uppercase tracking-widest text-[#B4BCC8] hover:text-[#F5B921] transition-colors">
+            PORTFOLIOS
+          </button>
+          <span class="text-[#B4BCC8] text-xs">/</span>
+          <span id="catViewBannerIndex" class="px-2.5 py-1 rounded bg-[#F5B921]/15 border border-[#F5B921]/30 text-xs font-bold text-[#F5B921] tracking-wider">
+            DIR / 01
+          </span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#B4BCC8]/40"></span>
+          <span id="catViewProjectCount" class="text-xs font-medium text-[#B4BCC8]">14 Archived Deliverables</span>
+        </div>
+
+        <!-- Dynamic Category Title -->
+        <h1 id="catViewBannerTitle" class="text-4xl md:text-6xl font-extrabold text-[#F5F7FA] tracking-tight leading-tight">
+          UI/UX &amp; Web Interfaces
+        </h1>
+
+        <!-- Domain Summary Description -->
+        <p id="catViewBannerDesc" class="text-base md:text-lg text-[#B4BCC8] max-w-3xl leading-relaxed">
+          Architecting high-conversion digital experiences, enterprise design systems, and responsive web portals with rigorous usability and typographic clarity.
+        </p>
+
+        <!-- Quick Switcher Domain Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pt-2 pb-1 scrollbar-none" id="catViewQuickTabs">
+          <button onclick="openCategory('uiux')" data-tab="uiux" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-bold transition-all bg-[#3B82F6] text-white">DIR / 01 UI/UX</button>
+          <button onclick="openCategory('motion')" data-tab="motion" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all">DIR / 02 Motion</button>
+          <button onclick="openCategory('branding')" data-tab="branding" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all">DIR / 03 Brand</button>
+          <button onclick="openCategory('elearning')" data-tab="elearning" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all">DIR / 04 eLearning</button>
+          <button onclick="openCategory('ai')" data-tab="ai" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all">DIR / 05 AI Pipelines</button>
+          <button onclick="openCategory('executive')" data-tab="executive" class="cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all">DIR / 06 Executive Comms</button>
+        </div>
+
+      </section>
+
+      <!-- Tiled Projects Grid -->
+      <section class="pt-12">
+        <div class="flex items-center justify-between pb-6">
+          <h2 class="text-xl md:text-2xl font-bold text-[#F5F7FA] flex items-center gap-2">
+            <span>Archived Case Studies &amp; Showcase Projects</span>
+            <span class="text-xs font-normal text-[#B4BCC8]">(Curated selection)</span>
+          </h2>
+        </div>
+
+        <div id="catViewProjectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- BEHANCE REDIRECT FOOTER BANNER -->
+      <section class="mt-16">
+        <div class="relative overflow-hidden rounded-3xl p-8 md:p-12 glass-panel border border-[#3B82F6]/40 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-[14px]">
+          <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#3B82F6]/20 rounded-full blur-[100px] pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#F5B921]/15 rounded-full blur-[100px] pointer-events-none"></div>
+          
+          <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#F5B921] animate-pulse"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#F5B921]">Curated External Showcase</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-extrabold text-[#F5F7FA] tracking-tight">
+                Explore complete production reels, brand books &amp; interactive prototypes.
+              </h3>
+              <p class="text-sm md:text-base text-[#B4BCC8] mt-2 leading-relaxed">
+                Over 50+ deep-dive case studies, live motion deliverables, interactive UI flows, and enterprise branding systems documented in full fidelity on Behance.
+              </p>
+            </div>
+            <div class="shrink-0 w-full md:w-auto">
+              <a href="https://www.behance.net/rajamet" target="_blank" rel="noopener noreferrer" 
+                 class="w-full md:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#F5B921] text-[#0E1116] text-base font-bold hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] hover:shadow-[0_0_25px_rgba(245,185,33,0.4)] active:scale-95 transition-all shadow-lg cursor-pointer group">
+                <span>More works on Behance</span>
+                <span class="material-symbols-outlined text-[20px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER FOR CATEGORY VIEW -->
+    <footer class="w-full bg-[#0E1116] border-t border-white/10 relative z-10">
+      <div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-7 h-7 rounded-full bg-[#F5B921] flex items-center justify-center font-bold text-xs text-[#0E1116]">
+              <span>R</span>
+            </div>
+            <span class="font-bold text-base text-[#F5F7FA] tracking-tight">Rajakumar M</span>
+          </div>
+          <p class="text-xs text-[#B4BCC8]">Bengaluru, Karnataka, India</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-space-lg text-center">
+          <span class="text-xs text-[#B4BCC8]">© 2026 Rajakumar M. All Rights Reserved.</span>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <button onclick="navigateToHome('work')" class="group min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#F5B921] text-[#0E1116] text-xs uppercase tracking-wider font-bold hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] active:scale-95 transition-all shadow-md cursor-pointer">
+            <span class="material-symbols-outlined text-[16px] text-[#0E1116] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            <span>Return to Homepage</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODALS & OVERLAYS                          -->
+  <!-- ========================================== -->
+
+  <!-- 1. Monograph & CV Modal -->
+  <div id="monographModal" onclick="if (event.target === this) closeMonographModal()" class="fixed inset-0 z-50 bg-[#0E1116]/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel max-w-2xl w-full rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl relative">
+      <button onclick="closeMonographModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B4BCC8] hover:text-[#F5F7FA] cursor-pointer">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+      
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] font-bold text-lg">R</div>
+        <div>
+          <h3 class="text-xl font-bold text-[#F5F7FA]">Executive Monograph &amp; CV</h3>
+          <p class="text-xs text-[#B4BCC8]">Rajakumar M · Creative Lead</p>
+        </div>
+      </div>
+      
+      <div class="space-y-4 my-6 text-sm text-[#B4BCC8] leading-relaxed">
+        <p>
+          With over <strong class="text-[#F5F7FA]">20 years of continuous practice</strong>, Rajakumar M has directed creative operations for Fortune 500 enterprises, including <span class="text-[#3B82F6]">Concentrix</span>, <span class="text-[#3B82F6]">Infosys Limited</span>, and <span class="text-[#3B82F6]">Target Corporation</span>.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
+          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center">
+            <span class="text-lg font-bold text-[#F5B921] block">20+ Yrs</span>
+            <span class="text-[11px] text-[#B4BCC8]">Industry Practice</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center">
+            <span class="text-lg font-bold text-[#F5F7FA] block">135k+</span>
+            <span class="text-[11px] text-[#B4BCC8]">Initiative Reach</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center col-span-2 sm:col-span-1">
+            <span class="text-lg font-bold text-[#3B82F6] block">9 Awards</span>
+            <span class="text-[11px] text-[#B4BCC8]">Excellence Honors</span>
+          </div>
+        </div>
+        <p class="text-xs">
+          Direct inquiries regarding full-length dossier transcripts, confidential case study deliverables, and executive portfolio decks may be initiated directly via email or the dispatch console.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 border-t border-white/10">
+        <a href="mailto:rajamet@gmail.com?subject=Request%20for%20Executive%20CV%20-%20Rajakumar%20M" class="w-full sm:w-auto flex-1 min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] transition-all">
+          <span class="material-symbols-outlined text-[18px]">mail</span>
+          <span>Request CV by Email</span>
+        </a>
+        <button onclick="closeMonographModal(); navigateToHome('contact');" class="w-full sm:w-auto px-6 py-3 rounded-full glass-panel text-[#F5F7FA] hover:border-[#3B82F6] font-medium text-sm transition-all cursor-pointer">
+          Direct Message
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Media Lightbox Modal -->
+  <div id="mediaLightboxModal" role="dialog" aria-modal="true" aria-label="Media Lightbox" class="fixed inset-0 z-50 bg-[#0E1116]/95 backdrop-blur-lg hidden flex flex-col justify-between p-4 sm:p-6 select-none" onclick="if (event.target === this) closeMediaLightbox()">
+    
+    <!-- Top Bar: Counter & Close Button -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between z-10 pointer-events-auto">
+      <div id="lightboxCounter" class="px-4 py-1.5 rounded-full glass-panel border border-white/10 text-xs font-semibold text-[#B4BCC8]" aria-live="polite">
+        0 / 0
+      </div>
+      <button id="lightboxCloseBtn" onclick="closeMediaLightbox()" class="min-h-[44px] min-w-[44px] rounded-full glass-panel border border-white/10 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] text-[#F5F7FA] hover:text-white flex items-center justify-center transition-all cursor-pointer" aria-label="Close lightbox">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+    </div>
+
+    <!-- Center Stage: Contain Viewport with Prev / Next Navigation -->
+    <div class="relative w-full max-w-7xl mx-auto flex-1 flex items-center justify-center px-2 sm:px-12 my-2 min-h-0 pointer-events-auto">
+      <!-- Previous Arrow Button -->
+      <button onclick="navigateLightbox(-1)" id="lightboxPrevBtn" class="absolute left-0 sm:left-2 z-20 min-h-[48px] min-w-[48px] rounded-full glass-panel border border-white/10 hover:border-[#3B82F6] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] text-[#F5F7FA] hover:text-[#F5B921] flex items-center justify-center transition-all cursor-pointer shadow-xl disabled:opacity-30 disabled:pointer-events-none" aria-label="Previous artwork">
+        <span class="material-symbols-outlined text-[28px]">chevron_left</span>
+      </button>
+
+      <!-- Media Display Area (Full-size with object-fit: contain) -->
+      <div class="w-full h-full flex items-center justify-center min-h-0 overflow-hidden">
+        <img id="lightboxImage" src="" alt="" class="max-w-full max-h-[82vh] rounded-xl shadow-2xl transition-all duration-300 hidden" style="object-fit: contain;" />
+        <video id="lightboxVideo" controls playsinline class="max-w-full max-h-[82vh] rounded-xl shadow-2xl hidden" style="object-fit: contain;"></video>
+      </div>
+
+      <!-- Next Arrow Button -->
+      <button onclick="navigateLightbox(1)" id="lightboxNextBtn" class="absolute right-0 sm:right-2 z-20 min-h-[48px] min-w-[48px] rounded-full glass-panel border border-white/10 hover:border-[#3B82F6] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] text-[#F5F7FA] hover:text-[#F5B921] flex items-center justify-center transition-all cursor-pointer shadow-xl disabled:opacity-30 disabled:pointer-events-none" aria-label="Next artwork">
+        <span class="material-symbols-outlined text-[28px]">chevron_right</span>
+      </button>
+    </div>
+
+    <!-- Bottom Bar: Keyboard hint only (artwork displayed without project descriptions) -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-center z-10 pointer-events-auto">
+      <div class="hidden sm:flex items-center gap-2 text-[11px] text-[#B4BCC8]/60">
+        <kbd class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-[#F5F7FA]">Esc</kbd> <span>Close</span>
+        <span class="mx-1">·</span>
+        <kbd class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-[#F5F7FA]">←</kbd>
+        <kbd class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-[#F5F7FA]">→</kbd> <span>Navigate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification Element -->
+  <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-panel text-[#F5F7FA] border border-[#3B82F6] px-space-lg py-space-sm rounded-full shadow-2xl flex items-center gap-space-xs text-xs font-semibold" id="copyToast">
+    <span class="material-symbols-outlined text-[18px] text-[#3B82F6]">check_circle</span>
+    <span>Email copied to clipboard (rajamet@gmail.com)</span>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC & ROUTER                  -->
+  <!-- ========================================== -->
+  <script>
+    // Category metadata configuration (preserving all 6 domain routing keys)
+    const CATEGORIES = {
+      "uiux": {
+        "index": "DIR / 01",
+        "title": "UI/UX & Web Interfaces",
+        "tagline": "Architecting high-conversion digital experiences, enterprise design systems, and responsive web portals with rigorous usability and typographic clarity.",
+        "icon": "devices",
+        "accent": "#3B82F6",
+        "skills": ["Figma", "Design Systems", "Web Architecture", "WCAG 2.1 AAA", "Micro-Interactions"]
+      },
+      "motion": {
+        "index": "DIR / 02",
+        "title": "Motion & Video Direction",
+        "tagline": "Crafting kinetic visual narratives, corporate brand anthems, 3D broadcast packages, and high-impact motion graphics for international campaigns.",
+        "icon": "movie",
+        "accent": "#F5B921",
+        "skills": ["After Effects", "Premiere Pro", "Kinetic Story", "3D Projection", "Sound Design"]
+      },
+      "branding": {
+        "index": "DIR / 03",
+        "title": "Brand Systems & Campaigns",
+        "tagline": "Developing enduring corporate identities, multi-continental brand guidelines, cross-platform campaign design, and strategic collateral.",
+        "icon": "auto_awesome",
+        "accent": "#3B82F6",
+        "skills": ["Brand Architecture", "Event Visuals", "Global Guidelines", "Packaging", "Typography"]
+      },
+      "elearning": {
+        "index": "DIR / 04",
+        "title": "eLearning & Interactive",
+        "tagline": "Pioneering interactive learning architectures, gamified assessment simulators, and pedagogical graphic frameworks at scale.",
+        "icon": "psychology",
+        "accent": "#F5B921",
+        "skills": ["Adobe Animate", "Captivate", "Gamified Modules", "Instructional Design", "Pedagogical UI"]
+      },
+      "ai": {
+        "index": "DIR / 05",
+        "title": "AI Creative Pipelines",
+        "tagline": "Operationalizing generative AI workflows, synthetic media generation, custom prompt architectures, and AI avatar production for creative teams.",
+        "icon": "neurology",
+        "accent": "#3B82F6",
+        "skills": ["Midjourney v6", "Synthesia & HeyGen", "Prompt Systems", "ComfyUI", "Synthetic Media"]
+      },
+      "executive": {
+        "index": "DIR / 06",
+        "title": "Executive Presentation & Comms",
+        "tagline": "Transforming dense enterprise data into authoritative keynote presentations, board decks, executive town halls, and internal publication portals.",
+        "icon": "analytics",
+        "accent": "#F5B921",
+        "skills": ["Staffbase", "Executive Keynotes", "Data Narratives", "Boardroom Slides", "HTML Email"]
+      }
+    };
+
+    /**
+     * GALLERY_MANIFEST
+     * Production Artwork Manifest Schema:
+     * [
+     *   {
+     *     id: "uiux-01",
+     *     category: "uiux", // "uiux" | "motion" | "branding" | "elearning" | "ai" | "executive"
+     *     type: "image",    // "image" | "video"
+     *     originalAssetPath: "assets/work/uiux-01-full.jpg",
+     *     thumbnailPath: "assets/work/uiux-01-thumb.jpg",
+     *     accessibleDescription: "Enterprise Design System Master Architecture",
+     *     displayOrder: 1
+     *   }
+     * ]
+     * Empty by default until real artwork files are supplied.
+     */
+    const GALLERY_MANIFEST = [];
+
+    // Current category in view
+    let currentCategoryKey = 'uiux';
+
+    // Lenis Inertial Smooth Scrolling Initialization
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      touchMultiplier: 1.5,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    window.lenis = lenis;
+
+    // 1. Apple-Style Slow & Smooth Scroll-Triggered Parallax / Fade-In Animation
+    function initScrollObserver() {
+      const portfolioCards = document.querySelectorAll('#portfolioFolderGrid .portfolio-card');
+      const skillCards = document.querySelectorAll('#skills .skill-card');
+
+      portfolioCards.forEach((card, index) => {
+        card.classList.add('portfolio-card');
+        const delay = index * 120 + 80;
+        card.style.transitionDelay = delay + 'ms';
+      });
+
+      skillCards.forEach((card, index) => {
+        card.classList.add('skill-card');
+        const delay = (index % 3) * 140 + 100;
+        card.style.transitionDelay = delay + 'ms';
+      });
+
+      const allCards = document.querySelectorAll('#work .portfolio-card, #skills .skill-card');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const card = entry.target;
+              card.classList.add('revealed');
+              observer.unobserve(card);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        allCards.forEach(card => observer.observe(card));
+      } else {
+        allCards.forEach(card => card.classList.add('revealed'));
+      }
+    }
+
+    // 2. Filter Portfolio Cards on Homepage
+    function filterPortfolio(category, clickedBtn) {
+      const cards = document.querySelectorAll('#portfolioFolderGrid .portfolio-card');
+      const buttons = document.querySelectorAll('#categoryFilterContainer .portfolio-filter-btn');
+
+      buttons.forEach(btn => {
+        btn.className = "portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer";
+      });
+      clickedBtn.className = "portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold transition-all shadow-sm cursor-pointer";
+
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat');
+        if (category === 'all' || cardCat === category || cardCat === 'all') {
+          card.style.display = 'flex';
+          card.style.transitionDelay = '0ms';
+          card.classList.add('revealed');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. SPA View Router: Open Category View
+    function openCategory(catKey, pushToHistory = true) {
+      const catData = CATEGORIES[catKey];
+      if (!catData) return;
+      currentCategoryKey = catKey;
+
+      document.getElementById('catViewBannerIndex').textContent = catData.index;
+      document.getElementById('catViewNavIndex').textContent = catData.index;
+      document.getElementById('catViewBannerTitle').textContent = catData.title;
+      document.getElementById('catViewNavTitle').textContent = catData.title;
+      document.getElementById('catViewBannerDesc').textContent = catData.tagline;
+
+      const catItems = GALLERY_MANIFEST.filter(item => item.category === catKey);
+      document.getElementById('catViewProjectCount').textContent = catItems.length > 0 
+        ? `${catItems.length} Archived Works` 
+        : 'Curated Archives Pending';
+
+      document.querySelectorAll('#catViewQuickTabs .cat-quick-tab').forEach(tab => {
+        const tabKey = tab.getAttribute('data-tab');
+        if (tabKey === catKey) {
+          tab.className = "cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-bold transition-all bg-[#3B82F6] text-white";
+        } else {
+          tab.className = "cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all";
+        }
+      });
+
+      renderCategoryProjects(catData);
+
+      document.getElementById('homeView').classList.add('hidden');
+      const catView = document.getElementById('categoryView');
+      catView.classList.remove('hidden');
+
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      if (pushToHistory) {
+        history.pushState({ view: 'category', catKey: catKey }, '', '#category/' + catKey);
+      }
+    }
+
+    // Render artwork tiles or tasteful empty state inside category view
+    function renderCategoryProjects(catData) {
+      const container = document.getElementById('catViewProjectsGrid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const items = GALLERY_MANIFEST
+        .filter(item => item.category === currentCategoryKey)
+        .sort((a, b) => {
+          const orderA = a.displayOrder ?? a.order ?? 0;
+          const orderB = b.displayOrder ?? b.order ?? 0;
+          return orderA - orderB;
+        });
+
+      if (items.length === 0) {
+        // Display tasteful, dark-cinematic empty gallery state
+        container.className = "col-span-full";
+        container.innerHTML = `
+          <div class="w-full rounded-3xl p-8 sm:p-14 glass-panel border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.4)] flex flex-col items-center text-center max-w-2xl mx-auto my-6">
+            <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-[#F5B921] shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">
+              <span class="material-symbols-outlined text-[32px]">${catData.icon || 'collections'}</span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-[#F5B921] mb-3">
+              <span class="w-2 h-2 rounded-full bg-[#F5B921] animate-pulse"></span>
+              <span>Curated Artwork Compilation</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#F5F7FA] tracking-tight mb-3">
+              Original Artwork Archive In Preparation
+            </h3>
+            <p class="text-sm sm:text-base text-[#B4BCC8] leading-relaxed mb-8 max-w-lg">
+              High-resolution case studies, master production stills, and motion assets for <strong>${catData.title}</strong> are being formatted for this gallery. In the interim, complete production archives are accessible on Behance or upon confidential request.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+              <a href="https://www.behance.net/rajamet" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm hover:bg-[#e6ab18] focus:outline-none focus:ring-2 focus:ring-[#F5B921] focus:ring-offset-2 focus:ring-offset-[#0E1116] active:scale-95 transition-all shadow-md group">
+                <span>Explore Active Archives on Behance</span>
+                <span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">open_in_new</span>
+              </a>
+              <button onclick="openMonographModal()" class="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full glass-panel border border-white/15 text-[#F5F7FA] hover:border-[#3B82F6] focus:outline-none focus:ring-2 focus:ring-[#3B82F6] font-medium text-sm active:scale-95 transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-[18px] text-[#F5B921]">mail</span>
+                <span>Request CV by Email</span>
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      container.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+
+      // Render image-only tiles: no title, description, badges, dates, or text overlays
+      items.forEach((item, index) => {
+        const tile = document.createElement('div');
+        tile.className = "group relative aspect-[4/3] rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-[#3B82F6] transition-all duration-300 hover:-translate-y-1 shadow-lg cursor-pointer bg-[#10141C]";
+        tile.setAttribute('tabindex', '0');
+        tile.setAttribute('role', 'button');
+        const altText = item.accessibleDescription || item.alt || 'View artwork full size';
+        tile.setAttribute('aria-label', altText);
+        tile.onclick = () => openMediaLightbox(index);
+        tile.onkeydown = (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openMediaLightbox(index);
+          }
+        };
+
+        const originalPath = item.originalAssetPath || item.assetPath;
+        const previewSrc = item.thumbnailPath || originalPath;
+        tile.innerHTML = `
+          <img src="${previewSrc}" alt="${altText}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          ${item.type === 'video' ? `
+            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors pointer-events-none">
+              <span class="w-12 h-12 rounded-full bg-[#F5B921] text-[#0E1116] flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-[24px]">play_arrow</span>
+              </span>
+            </div>
+          ` : ''}
+        `;
+        container.appendChild(tile);
+      });
+    }
+
+    // 4. Return to Homepage with Lenis Smooth Anchor Scrolling
+    function navigateToHome(targetAnchor = 'work', pushToHistory = true) {
+      document.getElementById('categoryView').classList.add('hidden');
+      document.getElementById('homeView').classList.remove('hidden');
+
+      if (targetAnchor) {
+        if (pushToHistory) {
+          history.pushState({ view: 'home', anchor: targetAnchor }, '', '#' + targetAnchor);
+        }
+        const el = document.getElementById(targetAnchor);
+        if (el) {
+          setTimeout(() => {
+            if (window.lenis) {
+              window.lenis.scrollTo(el, { offset: -70, duration: 1.2 });
+            } else {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 60);
+        }
+      } else {
+        if (pushToHistory) {
+          history.pushState({ view: 'home' }, '', '#');
+        }
+        if (window.lenis) {
+          window.lenis.scrollTo(0, { duration: 1.0 });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    }
+
+    // 5. Hash Routing & Browser Back/Forward navigation
+    function handleRouting() {
+      const hash = window.location.hash;
+      if (hash.startsWith('#category/')) {
+        const catKey = hash.replace('#category/', '').trim();
+        if (CATEGORIES[catKey]) {
+          openCategory(catKey, false);
+          return;
+        }
+      }
+      
+      if (hash === '#work' || hash === '#about' || hash === '#experience' || hash === '#skills' || hash === '#contact') {
+        navigateToHome(hash.replace('#', ''), false);
+      } else {
+        document.getElementById('categoryView').classList.add('hidden');
+        document.getElementById('homeView').classList.remove('hidden');
+      }
+    }
+
+    window.addEventListener('popstate', handleRouting);
+    window.addEventListener('hashchange', handleRouting);
+
+    // 6. Copy Email Handler
+    function copyEmailToClipboard() {
+      const email = 'rajamet@gmail.com';
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => showToast());
+      } else {
+        const tempInput = document.createElement('input');
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast();
+      }
+    }
+
+    function showToast() {
+      const toast = document.getElementById('copyToast');
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 3000);
+    }
+
+    // 7. Modals logic
+    function openMonographModal() {
+      if (window.lenis) window.lenis.stop();
+      document.getElementById('monographModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMonographModal() {
+      if (window.lenis) window.lenis.start();
+      document.getElementById('monographModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // 8. Media Lightbox Controller
+    let currentLightboxItems = [];
+    let currentLightboxIndex = 0;
+    let lastActiveElement = null;
+
+    function openMediaLightbox(index) {
+      const items = GALLERY_MANIFEST
+        .filter(i => i.category === currentCategoryKey)
+        .sort((a, b) => {
+          const orderA = a.displayOrder ?? a.order ?? 0;
+          const orderB = b.displayOrder ?? b.order ?? 0;
+          return orderA - orderB;
+        });
+
+      if (!items || items.length === 0) return;
+
+      currentLightboxItems = items;
+      currentLightboxIndex = (index >= 0 && index < items.length) ? index : 0;
+      lastActiveElement = document.activeElement;
+
+      if (window.lenis) window.lenis.stop();
+      document.body.style.overflow = 'hidden';
+
+      renderLightboxContent();
+      const modal = document.getElementById('mediaLightboxModal');
+      modal.classList.remove('hidden');
+
+      // Focus close button on open for accessibility
+      const closeBtn = document.getElementById('lightboxCloseBtn');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function renderLightboxContent() {
+      if (!currentLightboxItems.length) return;
+      const item = currentLightboxItems[currentLightboxIndex];
+      const imgEl = document.getElementById('lightboxImage');
+      const videoEl = document.getElementById('lightboxVideo');
+      const counterEl = document.getElementById('lightboxCounter');
+      const prevBtn = document.getElementById('lightboxPrevBtn');
+      const nextBtn = document.getElementById('lightboxNextBtn');
+
+      const assetPath = item.originalAssetPath || item.assetPath;
+      const altText = item.accessibleDescription || item.alt || 'Portfolio artwork';
+
+      // Pause and reset video if active
+      if (videoEl) {
+        videoEl.pause();
+        videoEl.removeAttribute('src');
+        videoEl.load();
+        videoEl.classList.add('hidden');
+      }
+
+      if (item.type === 'video') {
+        imgEl.classList.add('hidden');
+        imgEl.removeAttribute('src');
+        videoEl.src = assetPath;
+        videoEl.classList.remove('hidden');
+      } else {
+        videoEl.classList.add('hidden');
+        imgEl.src = assetPath;
+        imgEl.alt = altText;
+        imgEl.classList.remove('hidden');
+      }
+
+      if (counterEl) {
+        counterEl.textContent = `${currentLightboxIndex + 1} / ${currentLightboxItems.length}`;
+      }
+
+      if (currentLightboxItems.length <= 1) {
+        if (prevBtn) prevBtn.disabled = true;
+        if (nextBtn) nextBtn.disabled = true;
+      } else {
+        if (prevBtn) prevBtn.disabled = false;
+        if (nextBtn) nextBtn.disabled = false;
+      }
+    }
+
+    function navigateLightbox(direction) {
+      if (currentLightboxItems.length <= 1) return;
+      currentLightboxIndex = (currentLightboxIndex + direction + currentLightboxItems.length) % currentLightboxItems.length;
+      renderLightboxContent();
+    }
+
+    function closeMediaLightbox() {
+      const modal = document.getElementById('mediaLightboxModal');
+      if (!modal || modal.classList.contains('hidden')) return;
+
+      const videoEl = document.getElementById('lightboxVideo');
+      if (videoEl) {
+        videoEl.pause();
+        videoEl.removeAttribute('src');
+        videoEl.load();
+        videoEl.classList.add('hidden');
+      }
+
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (window.lenis) window.lenis.start();
+
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
+    }
+
+    function prefillContactForm(scopeValue) {
+      const select = document.getElementById('projectScopeSelect');
+      if (select) {
+        select.value = scopeValue;
+      }
+      const textarea = document.getElementById('messageDetailsArea');
+      if (textarea) {
+        textarea.value = 'I would like to inquire regarding strategic creative leadership collaboration for ' + scopeValue + '.';
+      }
+      navigateToHome('contact');
+    }
+
+    // 9. Contact Inquiry Dispatch (Mailto fallback with validation and status feedback)
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = (form.name.value || '').trim();
+      const email = (form.email.value || '').trim();
+      const scope = (form.scope.value || '').trim();
+      const message = (form.message.value || '').trim();
+      const statusBox = document.getElementById('contactFormStatus');
+
+      // Validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!name || !email || !message) {
+        if (statusBox) {
+          statusBox.className = "rounded-xl p-4 text-xs font-semibold bg-red-950/70 border border-red-500/50 text-red-200 mt-2";
+          statusBox.textContent = "Please fill in all required fields (Name, Email, and Message) before sending.";
+          statusBox.classList.remove('hidden');
+        }
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        if (statusBox) {
+          statusBox.className = "rounded-xl p-4 text-xs font-semibold bg-red-950/70 border border-red-500/50 text-red-200 mt-2";
+          statusBox.textContent = "Please provide a valid email address.";
+          statusBox.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // Construct mailto URI
+      const subject = encodeURIComponent(`Creative Leadership Inquiry — ${name} [${scope}]`);
+      const body = encodeURIComponent(
+        `Executive Inquiry Details:\n\n` +
+        `From: ${name}\n` +
+        `Email: ${email}\n` +
+        `Engagement Scope: ${scope}\n\n` +
+        `Message:\n${message}\n\n` +
+        `---\nInitiated via portfolio dispatch console (Rajakumar M)`
+      );
+      const mailtoUrl = `mailto:rajamet@gmail.com?subject=${subject}&body=${body}`;
+
+      // Transparent guidance — preserve form inputs and instruct user to complete send in their email app
+      if (statusBox) {
+        statusBox.className = "rounded-xl p-4 text-xs leading-relaxed bg-[#161B22] border border-[#F5B921]/40 text-[#F5F7FA] mt-2 space-y-2 shadow-lg";
+        statusBox.innerHTML = `
+          <div class="flex items-center gap-2 text-[#F5B921] font-bold">
+            <span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+            <span>Email Client Initiated</span>
+          </div>
+          <p class="text-[#B4BCC8]">
+            Your inquiry draft addressed to <strong class="text-[#F5F7FA]">rajamet@gmail.com</strong> has opened in your default email application. Please review and click <strong>Send</strong> in your mail application to dispatch your message.
+          </p>
+          <p class="text-[11px] text-[#B4BCC8]/70">
+            If your email app did not launch automatically, you can email directly to <a href="mailto:rajamet@gmail.com" class="text-[#F5B921] underline">rajamet@gmail.com</a>. Your entered details have been preserved above.
+          </p>
+        `;
+        statusBox.classList.remove('hidden');
+      }
+
+      window.location.href = mailtoUrl;
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const isOpening = drawer.classList.contains('hidden');
+      if (isOpening) {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      } else {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+    }
+
+// Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      initScrollObserver();
+      handleRouting();
+
+      // Keyboard navigation & Dialog focus management
+      document.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('mediaLightboxModal');
+        const isLightboxOpen = modal && !modal.classList.contains('hidden');
+
+        if (e.key === 'Escape') {
+          closeMonographModal();
+          if (isLightboxOpen) closeMediaLightbox();
+          const drawer = document.getElementById('mobileMenuDrawer');
+          if (drawer && !drawer.classList.contains('hidden')) {
+            toggleMobileMenu();
+          }
+        } else if (e.key === 'ArrowLeft') {
+          if (isLightboxOpen) {
+            e.preventDefault();
+            navigateLightbox(-1);
+          }
+        } else if (e.key === 'ArrowRight') {
+          if (isLightboxOpen) {
+            e.preventDefault();
+            navigateLightbox(1);
+          }
+        } else if (e.key === 'Tab' && isLightboxOpen) {
+          // Focus trap within open lightbox modal
+          const focusable = modal.querySelectorAll('button:not([disabled]), [tabindex="0"], video[controls]');
+          if (focusable.length > 0) {
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+      });
+
+      // Mobile touch swipe gestures for lightbox navigation
+      const lightboxModal = document.getElementById('mediaLightboxModal');
+      let touchStartX = 0;
+      let touchStartY = 0;
+      if (lightboxModal) {
+        lightboxModal.addEventListener('touchstart', (e) => {
+          if (e.touches && e.touches[0]) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+          }
+        }, { passive: true });
+
+        lightboxModal.addEventListener('touchend', (e) => {
+          if (e.changedTouches && e.changedTouches[0]) {
+            const deltaX = e.changedTouches[0].clientX - touchStartX;
+            const deltaY = e.changedTouches[0].clientY - touchStartY;
+            if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+              if (deltaX < 0) {
+                navigateLightbox(1); // Swipe left = next
+              } else {
+                navigateLightbox(-1); // Swipe right = previous
+              }
+            }
+          }
+        }, { passive: true });
+      }
+    });
+  </script>
+
+</body>
+</html>
