@@ -1,4 +1,20 @@
 /* Scoped to the AI pilot: all other category layouts stay as authored. */
+#portfolioFolderGrid .portfolio-card[data-cat="ai"] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#portfolioFolderGrid .portfolio-card[data-cat="ai"].revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#portfolioFolderGrid .portfolio-card[data-cat="ai"].revealed:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
 #catViewProjectsGrid.ai-artwork-grid {
   display: block;
   column-count: 3;
@@ -15,7 +31,26 @@
   border-radius: 16px;
   background: rgba(22, 27, 34, 0.65);
   cursor: zoom-in;
-  transition: border-color 180ms ease, background-color 180ms ease;
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 180ms ease, background-color 180ms ease;
+  transition-delay: var(--ai-reveal-delay, 0ms), var(--ai-reveal-delay, 0ms), 0ms, 0ms;
+}
+
+.ai-artwork-tile.is-reveal-pending {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+}
+
+.ai-artwork-tile.is-revealed,
+.ai-artwork-tile:focus-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.ai-artwork-tile:focus-visible {
+  transition-duration: 0ms, 0ms, 180ms, 180ms;
+  transition-delay: 0ms;
 }
 
 .ai-artwork-tile:hover {
@@ -50,12 +85,30 @@
   color: #F5F7FA;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
   overscroll-behavior: contain;
+  opacity: 0;
+  transform: translateY(8px) scale(0.985);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ai-artwork-dialog.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ai-artwork-dialog.is-closing {
+  transition-duration: 320ms;
 }
 
 .ai-artwork-dialog::backdrop {
   background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.ai-artwork-dialog.is-visible::backdrop { opacity: 1; }
+.ai-artwork-dialog.is-closing::backdrop { transition-duration: 320ms; }
 
 .ai-artwork-toolbar {
   display: flex;
@@ -136,5 +189,17 @@
   .ai-artwork-stage img { max-height: calc(100vh - 164px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ai-artwork-tile, .ai-artwork-dialog button { transition: none; }
+  #portfolioFolderGrid .portfolio-card[data-cat="ai"],
+  .ai-artwork-tile,
+  .ai-artwork-tile.is-reveal-pending,
+  .ai-artwork-tile.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms !important;
+  }
+  #portfolioFolderGrid .portfolio-card[data-cat="ai"].revealed:hover { transform: none; }
+  .ai-artwork-dialog,
+  .ai-artwork-dialog::backdrop,
+  .ai-artwork-dialog button { transition: none; }
 }

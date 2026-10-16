@@ -33,8 +33,11 @@
   const error = dialog.querySelector('.ai-artwork-error');
   const position = dialog.querySelector('.ai-artwork-position');
   const [closeButton, previousButton, nextButton] = dialog.querySelectorAll('button');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let currentIndex = 0;
   let savedState = null;
+  let revealObserver = null;
+  let closingTimer = null;
 
   function showArtwork(index) {
     currentIndex = (index + artworks.length) % artworks.length;
@@ -61,12 +64,35 @@
     if (restoreFocus && state.opener.isConnected) state.opener.focus({ preventScroll: true });
   }
 
-  function close(restoreFocus = true) {
+  function finishClose(restoreFocus = true) {
+    clearTimeout(closingTimer);
+    closingTimer = null;
     if (dialog.open) dialog.close();
+    dialog.classList.remove('is-visible', 'is-closing');
     restorePage(restoreFocus);
   }
 
+  function close(restoreFocus = true) {
+    // Route changes must finish immediately, including an in-progress dismissal.
+    if (!restoreFocus) {
+      if (revealObserver) revealObserver.disconnect();
+      revealObserver = null;
+      finishClose(false);
+      return;
+    }
+    if (!dialog.open || reducedMotion.matches) {
+      finishClose(restoreFocus);
+      return;
+    }
+    if (dialog.classList.contains('is-closing')) return;
+    dialog.classList.add('is-closing');
+    dialog.classList.remove('is-visible');
+    // A fallback also handles interrupted transitions or a background browser tab.
+    closingTimer = setTimeout(() => finishClose(), 400);
+  }
+
   function open(index, opener) {
+    if (dialog.open) finishClose(false);
     savedState = {
       opener,
       scrollX: window.scrollX,
@@ -80,11 +106,29 @@
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
     dialog.showModal();
+    // Establish the transparent start state before transitioning the native dialog
+    // and its backdrop together. Layout and focus still update immediately.
+    dialog.getBoundingClientRect();
+    getComputedStyle(dialog, '::backdrop').opacity;
+    dialog.classList.add('is-visible');
     closeButton.focus({ preventScroll: true });
   }
 
   function render(container) {
     close(false);
+    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+      revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.filter(entry => entry.isIntersecting).forEach((entry, index) => {
+          const tile = entry.target;
+          observer.unobserve(tile);
+          tile.style.setProperty('--ai-reveal-delay', `${Math.min(index, 3) * 70}ms`);
+          // Reveal decoded artwork rather than an empty image frame.
+          tile.querySelector('img').decode().catch(() => {}).then(() => {
+            if (tile.isConnected) tile.classList.add('is-revealed');
+          });
+        });
+      }, { threshold: 0.02, rootMargin: '0px 0px -16px 0px' });
+    }
     artworks.forEach((artwork, index) => {
       const tile = document.createElement('button');
       tile.type = 'button';
@@ -102,6 +146,10 @@
       tile.appendChild(thumbnail);
       tile.addEventListener('click', () => open(index, tile));
       container.appendChild(tile);
+      if (revealObserver) {
+        tile.classList.add('is-reveal-pending');
+        revealObserver.observe(tile);
+      }
     });
   }
 
@@ -113,7 +161,18 @@
     close();
   });
   dialog.addEventListener('close', () => {
-    if (!dialog.open) restorePage();
+    if (!dialog.open) finishClose();
+  });
+  dialog.addEventListener('transitionend', event => {
+    if (event.target === dialog && event.propertyName === 'transform' &&
+        dialog.classList.contains('is-closing')) finishClose();
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (!reducedMotion.matches) return;
+    if (revealObserver) revealObserver.disconnect();
+    revealObserver = null;
+    document.querySelectorAll('.ai-artwork-tile').forEach(tile => tile.classList.add('is-revealed'));
+    if (dialog.classList.contains('is-closing')) finishClose();
   });
   dialog.addEventListener('keydown', event => {
     if (event.key === 'Tab') {

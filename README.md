@@ -24,6 +24,10 @@ Internet connection is required for its original styling and scrolling.
 - Click a tile for the full-resolution original in a dialog. Use the close
   button, Escape, or the backdrop to return to the same gallery position.
 - Previous/next buttons and Left/Right keys move between artworks.
+- The AI homepage card and gallery tiles reveal with a soft 1.3-second fade
+  and gentle upward movement. Gallery reveals use a short stagger as they
+  enter the viewport. The preview fades/scales open and closes smoothly.
+  Reduced-motion preferences show content and dismiss the preview immediately.
 - The original homepage, category headers, quick-switch tabs, and return
   navigation are retained. The other five categories still contain the
   original demonstration projects and are awaiting their own artwork pass.
