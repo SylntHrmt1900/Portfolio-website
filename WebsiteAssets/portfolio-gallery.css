@@ -268,3 +268,26 @@
 #contactDraftLink[hidden] { display: none; }
 @media (min-width: 640px) { .contact-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .contact-action { transition: none; } }
+
+/* The native menu keeps keyboard focus and touch scrolling inside the overlay. */
+.mobile-nav-dialog {
+  width: 100%; height: 100vh; height: 100dvh;
+  max-width: none; max-height: none; margin: 0; border: 0;
+  overflow-y: auto; overscroll-behavior: contain; color: #F5F7FA;
+}
+.mobile-nav-dialog[open] { display: flex; justify-content: safe center; animation: mobile-menu-enter 220ms ease-out; }
+.mobile-nav-dialog::backdrop { background: rgba(0,0,0,.75); }
+.mobile-nav-dialog a, .mobile-nav-dialog button { min-height: 44px; }
+.mobile-nav-dialog :focus-visible,
+#downloadCV:focus-visible,
+#portfolioFolderGrid .portfolio-card:focus-visible,
+.cat-quick-tab:focus-visible { outline: 3px solid #F5B921; outline-offset: 4px; }
+#copyToast { max-width: calc(100vw - 32px); width: max-content; }
+@keyframes mobile-menu-enter {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html, body { scroll-behavior: auto !important; }
+  .mobile-nav-dialog[open] { animation: none; }
+}

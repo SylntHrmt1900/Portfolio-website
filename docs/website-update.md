@@ -69,3 +69,30 @@ URL encoding, popup fallback, stale-draft removal and both handoffs were checked
 Email sending and signed-in Gmail were not exercised. No CV PDF is present, so
 the existing Request CV by Email action remains truthful; direct downloading
 requires the actual resume file.
+
+## Follow-up: uploaded resume and navigation polish
+
+The supplied `Resume/Rajakumar_M_Resume_ATS_Updated.pdf` is a valid, unencrypted,
+two-page text PDF (78,065 bytes). The hero action now downloads that original as
+`Rajakumar-M-CV.pdf` without opening an email request or navigating away. The old
+CV request popup and its unused JavaScript were removed. Resume bytes are unchanged.
+
+The mobile menu now uses a native modal dialog with keyboard focus containment,
+Escape/close behavior, an announced expanded state, and correct scroll/focus
+restoration. It scrolls internally on short landscape screens and closes when
+switching to desktop navigation. Section navigation focuses destination headings,
+category views update the document title and active switcher state, and the
+selected category remains visible in the mobile horizontal strip. Filters expose
+their selected state. Stale section-scroll timers are canceled during routing.
+
+Reduced-motion navigation avoids both custom and native smooth scrolling. If the
+optional smooth-scroll library cannot load, normal routing remains usable. Copy
+email handles permission denial and unavailable fallback honestly instead of
+showing a false copied message or leaving an unhandled promise rejection.
+
+CV downloads were exercised at 1440, 1024, 768, 390 and 320 pixels: each downloaded
+file exactly matches the uploaded PDF, has the expected friendly filename, and
+leaves the page open. Mobile focus/scroll, keyboard menu use, resize behavior,
+category title/focus/current state, filters, reduced-motion return to top, optional
+library failure and copy-success/failure were verified. A separate 740x390 check
+confirmed internal menu scrolling without moving the page behind it.

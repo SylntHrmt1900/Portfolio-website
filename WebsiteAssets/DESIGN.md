@@ -38,5 +38,7 @@ are `portfolio-gallery.js` and `portfolio-gallery.css`.
 Do not add new promotional sections, fictional projects, synthetic SVG work,
 metrics or career claims. Keep the contact form truthful about email-client
 draft handoff through Gmail or the configured email app. Visitors must press
-Send themselves. Keep the CV action truthful about requesting a file by email
-until an actual CV PDF is supplied for a direct download.
+Send themselves. The Download CV anchor points to the supplied original PDF in
+`Resume/` and uses a browser download; do not restore the old request popup.
+Keep mobile navigation modal and keyboard accessible, restore focus correctly,
+and retain category titles, selected-filter state, and reduced-motion support.

@@ -156,7 +156,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="portfolio-gallery.css?v=4">
+  <link rel="stylesheet" href="portfolio-gallery.css?v=5">
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
@@ -272,7 +272,7 @@
         <div class="flex items-center gap-space-sm md:gap-space-md">
           <a class="min-h-[44px] inline-flex items-center justify-center px-space-md md:px-space-lg py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-[12px] uppercase tracking-wider font-bold hover:bg-[#e6ab18] active:scale-95 transition-all shadow-md" href="#contact" onclick="navigateToHome('contact'); return false;">LET'S TALK</a>
           
-          <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B4BCC8] hover:text-[#F5F7FA] transition-colors" aria-label="Toggle Navigation">
+          <button id="mobileMenuToggle" type="button" aria-controls="mobileMenuDrawer" aria-expanded="false" onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B4BCC8] hover:text-[#F5F7FA] transition-colors" aria-label="Open menu">
             <span class="material-symbols-outlined text-[22px]">menu</span>
           </button>
         </div>
@@ -280,23 +280,23 @@
     </header>
 
     <!-- Mobile Drawer Navigation Overlay -->
-    <div id="mobileMenuDrawer" class="fixed inset-0 z-[60] bg-[#0E1116]/95 backdrop-blur-xl hidden flex-col items-center justify-center gap-6 p-8 transition-all duration-300">
+    <dialog aria-label="Main navigation" data-lenis-prevent id="mobileMenuDrawer" class="fixed inset-0 z-[60] bg-[#0E1116]/95 backdrop-blur-xl mobile-nav-dialog flex-col items-center justify-center gap-6 p-8 transition-all duration-300">
       <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 w-12 h-12 rounded-full glass-panel flex items-center justify-center text-[#F5F7FA]" aria-label="Close menu">
         <span class="material-symbols-outlined text-2xl">close</span>
       </button>
       <div class="flex flex-col items-center gap-5 text-center">
         <div class="w-16 h-16 rounded-full bg-[#F5B921] text-[#0E1116] flex items-center justify-center font-bold text-2xl mb-2">R</div>
-        <span class="text-xl font-bold text-[#F5F7FA]">Rajakumar M</span>
+        <span id="mobileMenuTitle" class="text-xl font-bold text-[#F5F7FA]">Rajakumar M</span>
         <span class="text-xs uppercase tracking-wider text-[#B4BCC8]">Creative Lead | Brand, Digital &amp; Motion Design</span>
         <div class="w-16 h-0.5 bg-white/10 my-2"></div>
-        <a href="#work" onclick="toggleMobileMenu(); navigateToHome('work');" class="text-lg font-semibold text-[#F5F7FA] py-2">Work &amp; Archives</a>
-        <a href="#about" onclick="toggleMobileMenu(); navigateToHome('about');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">About &amp; Leadership</a>
-        <a href="#experience" onclick="toggleMobileMenu(); navigateToHome('experience');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Career History</a>
-        <a href="#skills" onclick="toggleMobileMenu(); navigateToHome('skills');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Software Stack</a>
-        <a href="#contact" onclick="toggleMobileMenu(); navigateToHome('contact');" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Contact &amp; Inquiries</a>
-        <a href="#contact" onclick="toggleMobileMenu(); navigateToHome('contact');" class="mt-4 px-8 py-3 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm uppercase tracking-wider">LET'S TALK</a>
+        <a href="#work" onclick="closeMobileMenu(false); navigateToHome('work'); return false;" class="text-lg font-semibold text-[#F5F7FA] py-2">Work &amp; Archives</a>
+        <a href="#about" onclick="closeMobileMenu(false); navigateToHome('about'); return false;" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">About &amp; Leadership</a>
+        <a href="#experience" onclick="closeMobileMenu(false); navigateToHome('experience'); return false;" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Career History</a>
+        <a href="#skills" onclick="closeMobileMenu(false); navigateToHome('skills'); return false;" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Software Stack</a>
+        <a href="#contact" onclick="closeMobileMenu(false); navigateToHome('contact'); return false;" class="text-lg font-semibold text-[#B4BCC8] hover:text-[#F5F7FA] py-2">Contact &amp; Inquiries</a>
+        <a href="#contact" onclick="closeMobileMenu(false); navigateToHome('contact'); return false;" class="mt-4 px-8 py-3 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm uppercase tracking-wider">LET'S TALK</a>
       </div>
-    </div>
+    </dialog>
 
     <!-- MAIN HOMEPAGE CONTENT -->
     <main class="w-full pb-12 bg-transparent min-h-screen relative z-10">
@@ -343,10 +343,10 @@
               <span>View Selected Work</span>
               <span class="material-symbols-outlined text-[20px] group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
             </a>
-            <button onclick="openMonographModal()" class="min-h-[44px] inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full glass-panel text-[#F5F7FA] hover:border-[#3B82F6] text-base font-medium active:scale-95 transition-all shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] cursor-pointer group">
+            <a id="downloadCV" href="../Resume/Rajakumar_M_Resume_ATS_Updated.pdf" download="Rajakumar-M-CV.pdf" aria-label="Download CV (PDF, 76 KB)" title="Download CV (PDF, 76 KB)" class="min-h-[44px] inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full glass-panel text-[#F5F7FA] hover:border-[#3B82F6] text-base font-medium active:scale-95 transition-all shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] cursor-pointer group">
               <span class="material-symbols-outlined text-[20px] text-[#3B82F6] group-hover:scale-110 transition-transform">download</span>
-              <span>Request CV by Email</span>
-            </button>
+              <span>Download CV</span>
+            </a>
           </div>
 
           <!-- Metrics Grid -->
@@ -1203,62 +1203,8 @@
   </div>
 
 
-  <!-- ========================================== -->
-  <!-- MODALS & OVERLAYS                          -->
-  <!-- ========================================== -->
-
-  <!-- 1. Monograph & CV Modal -->
-  <div id="monographModal" onclick="if (event.target === this) closeMonographModal()" class="fixed inset-0 z-50 bg-[#0E1116]/85 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="glass-panel max-w-2xl w-full rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl relative">
-      <button onclick="closeMonographModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B4BCC8] hover:text-[#F5F7FA] cursor-pointer">
-        <span class="material-symbols-outlined text-[18px]">close</span>
-      </button>
-      
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-full bg-[#F5B921] flex items-center justify-center text-[#0E1116] font-bold text-lg">R</div>
-        <div>
-          <h3 class="text-xl font-bold text-[#F5F7FA]">Executive Monograph &amp; CV</h3>
-          <p class="text-xs text-[#B4BCC8]">Rajakumar M · Creative Lead</p>
-        </div>
-      </div>
-      
-      <div class="space-y-4 my-6 text-sm text-[#B4BCC8] leading-relaxed">
-        <p>
-          With over <strong class="text-[#F5F7FA]">20 years of continuous practice</strong>, Rajakumar M has directed creative operations for Fortune 500 enterprises, including <span class="text-[#3B82F6]">Concentrix</span>, <span class="text-[#3B82F6]">Infosys Limited</span>, and <span class="text-[#3B82F6]">Target Corporation</span>.
-        </p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
-          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center">
-            <span class="text-lg font-bold text-[#F5B921] block">20+ Yrs</span>
-            <span class="text-[11px] text-[#B4BCC8]">Industry Practice</span>
-          </div>
-          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center">
-            <span class="text-lg font-bold text-[#F5F7FA] block">135k+</span>
-            <span class="text-[11px] text-[#B4BCC8]">Initiative Reach</span>
-          </div>
-          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-center col-span-2 sm:col-span-1">
-            <span class="text-lg font-bold text-[#3B82F6] block">9 Awards</span>
-            <span class="text-[11px] text-[#B4BCC8]">Excellence Honors</span>
-          </div>
-        </div>
-        <p class="text-xs">
-          Direct inquiries regarding full-length dossier transcripts, confidential case study deliverables, and executive portfolio decks may be initiated directly via email or the dispatch console.
-        </p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 border-t border-white/10">
-        <a href="mailto:rajamet@gmail.com?subject=Request%20for%20Monograph%20%26%20Executive%20CV%20-%20Rajakumar%20M" class="w-full sm:w-auto flex-1 min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#F5B921] text-[#0E1116] font-bold text-sm hover:bg-[#e6ab18] transition-all">
-          <span class="material-symbols-outlined text-[18px]">download</span>
-          <span>Request CV by Email</span>
-        </a>
-        <button onclick="closeMonographModal(); navigateToHome('contact');" class="w-full sm:w-auto px-6 py-3 rounded-full glass-panel text-[#F5F7FA] hover:border-[#3B82F6] font-medium text-sm transition-all cursor-pointer">
-          Direct Message
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- Interactive Toast Notification Element -->
-  <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-panel text-[#F5F7FA] border border-[#3B82F6] px-space-lg py-space-sm rounded-full shadow-2xl flex items-center gap-space-xs text-xs font-semibold" id="copyToast">
+  <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-panel text-[#F5F7FA] border border-[#3B82F6] px-space-lg py-space-sm rounded-full shadow-2xl flex items-center gap-space-xs text-xs font-semibold" id="copyToast" role="status" aria-live="polite">
     <span class="material-symbols-outlined text-[18px] text-[#3B82F6]">check_circle</span>
     <span>Email copied to clipboard (rajamet@gmail.com)</span>
   </div>
@@ -1272,17 +1218,29 @@
     // Injected Category Data
     const CATEGORIES = {"uiux": {"index": "DIR / 01", "title": "UI/UX & Web Interfaces", "tagline": "Architecting high-conversion digital experiences, enterprise design systems, and responsive web portals with rigorous usability and typographic clarity.", "icon": "devices", "accent": "#3B82F6", "skills": ["Figma", "Design Systems", "Web Architecture", "WCAG 2.1 AAA", "Micro-Interactions"]}, "motion": {"index": "DIR / 02", "title": "Motion & Video Direction", "tagline": "Crafting kinetic visual narratives, corporate brand anthems, 3D broadcast packages, and high-impact motion graphics for international campaigns.", "icon": "movie", "accent": "#F5B921", "skills": ["After Effects", "Premiere Pro", "Kinetic Story", "3D Projection", "Sound Design"]}, "branding": {"index": "DIR / 03", "title": "Brand Systems & Campaigns", "tagline": "Developing enduring corporate identities, multi-continental brand guidelines, cross-platform campaign design, and strategic collateral.", "icon": "auto_awesome", "accent": "#3B82F6", "skills": ["Brand Architecture", "Event Visuals", "Global Guidelines", "Packaging", "Typography"]}, "elearning": {"index": "DIR / 04", "title": "eLearning & Interactive", "tagline": "Pioneering interactive learning architectures, gamified assessment simulators, and pedagogical graphic frameworks at scale.", "icon": "psychology", "accent": "#F5B921", "skills": ["Adobe Animate", "Captivate", "Gamified Modules", "Instructional Design", "Pedagogical UI"]}, "ai": {"index": "DIR / 05", "title": "AI Creative Pipelines", "tagline": "Operationalizing generative AI workflows, synthetic media generation, custom prompt architectures, and AI avatar production for creative teams.", "icon": "neurology", "accent": "#3B82F6", "skills": ["Midjourney v6", "Synthesia & HeyGen", "Prompt Systems", "ComfyUI", "Synthetic Media"]}, "executive": {"index": "DIR / 06", "title": "Executive Presentation & Comms", "tagline": "Transforming dense enterprise data into authoritative keynote presentations, board decks, executive town halls, and internal publication portals.", "icon": "analytics", "accent": "#F5B921", "skills": ["Staffbase", "Executive Keynotes", "Data Narratives", "Boardroom Slides", "HTML Email"]}};
 
+    const HOME_PAGE_TITLE = document.title;
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let menuState = null;
+    let anchorTimer = null;
+
+    function focusSection(element) {
+      const heading = element.matches('h1, h2, h3') ? element : element.querySelector('h1, h2, h3') || element;
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+
     // Current category in view
     let currentCategoryKey = 'uiux';
 
     // Lenis Inertial Smooth Scrolling Initialization
-    const lenis = new Lenis({
+    const lenis = typeof Lenis === 'function' ? new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 1.5,
-    });
+    }) : null;
     function raf(time) {
+      if (!lenis) return;
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -1342,8 +1300,10 @@
       const buttons = document.querySelectorAll('#categoryFilterContainer .portfolio-filter-btn');
 
       buttons.forEach(btn => {
+        btn.setAttribute('aria-pressed', 'false');
         btn.className = "portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] text-sm font-medium transition-all cursor-pointer";
       });
+      clickedBtn.setAttribute('aria-pressed', 'true');
       clickedBtn.className = "portfolio-filter-btn shrink-0 min-h-[44px] px-space-lg py-space-sm rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold transition-all shadow-sm cursor-pointer";
 
       cards.forEach(card => {
@@ -1362,7 +1322,10 @@
     function openCategory(catKey, pushToHistory = true) {
       const catData = CATEGORIES[catKey];
       if (!catData) return;
+      clearTimeout(anchorTimer);
+      closeMobileMenu(false);
       WorkGallery.close(false);
+      document.title = `${catData.title} — Rajakumar M`;
       currentCategoryKey = catKey;
 
       document.getElementById('catViewBannerIndex').textContent = catData.index;
@@ -1377,8 +1340,10 @@
       document.querySelectorAll('#catViewQuickTabs .cat-quick-tab').forEach(tab => {
         const tabKey = tab.getAttribute('data-tab');
         if (tabKey === catKey) {
+          tab.setAttribute('aria-current', 'page');
           tab.className = "cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-bold transition-all bg-[#3B82F6] text-white";
         } else {
+          tab.removeAttribute('aria-current');
           tab.className = "cat-quick-tab shrink-0 px-4 py-2 rounded-full text-xs font-medium glass-panel text-[#B4BCC8] hover:text-[#F5F7FA] hover:border-[#3B82F6] transition-all";
         }
       });
@@ -1388,11 +1353,15 @@
       document.getElementById('homeView').classList.add('hidden');
       const catView = document.getElementById('categoryView');
       catView.classList.remove('hidden');
+      const switcher = document.getElementById('catViewQuickTabs');
+      const activeTab = switcher.querySelector('[aria-current="page"]');
+      switcher.scrollTo({ left: Math.max(0, activeTab.offsetLeft - switcher.offsetLeft - (switcher.clientWidth - activeTab.offsetWidth) / 2), behavior: 'instant' });
+      focusSection(document.getElementById('catViewBannerTitle'));
 
       if (window.lenis) {
         window.lenis.scrollTo(0, { immediate: true });
       } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: motionPreference.matches ? 'instant' : 'smooth' });
       }
 
       if (pushToHistory) {
@@ -1409,7 +1378,10 @@
 
     // 4. Return to Homepage with Lenis Smooth Anchor Scrolling
     function navigateToHome(targetAnchor = 'work', pushToHistory = true) {
+      clearTimeout(anchorTimer);
+      closeMobileMenu(false);
       WorkGallery.close(false);
+      document.title = HOME_PAGE_TITLE;
       document.getElementById('categoryView').classList.add('hidden');
       document.getElementById('homeView').classList.remove('hidden');
 
@@ -1419,22 +1391,24 @@
         }
         const el = document.getElementById(targetAnchor);
         if (el) {
-          setTimeout(() => {
+          anchorTimer = setTimeout(() => {
+            focusSection(el);
             if (window.lenis) {
-              window.lenis.scrollTo(el, { offset: -70, duration: 1.2 });
+              window.lenis.scrollTo(el, { offset: -110, duration: 1.2, immediate: motionPreference.matches });
             } else {
-              el.scrollIntoView({ behavior: 'smooth' });
+              el.scrollIntoView({ behavior: motionPreference.matches ? 'instant' : 'smooth' });
             }
           }, 60);
         }
       } else {
+        focusSection(document.getElementById('hero'));
         if (pushToHistory) {
           history.pushState({ view: 'home' }, '', '#');
         }
         if (window.lenis) {
-          window.lenis.scrollTo(0, { duration: 1.0 });
+          window.lenis.scrollTo(0, { duration: 1.0, immediate: motionPreference.matches });
         } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: motionPreference.matches ? 'instant' : 'smooth' });
         }
       }
     }
@@ -1454,6 +1428,9 @@
       if (hash === '#work' || hash === '#about' || hash === '#experience' || hash === '#skills' || hash === '#contact') {
         navigateToHome(hash.replace('#', ''), false);
       } else {
+        clearTimeout(anchorTimer);
+        closeMobileMenu(false);
+        document.title = HOME_PAGE_TITLE;
         document.getElementById('categoryView').classList.add('hidden');
         document.getElementById('homeView').classList.remove('hidden');
       }
@@ -1463,54 +1440,42 @@
     window.addEventListener('hashchange', handleRouting);
 
     // 6. Copy Email Handler
-    function copyEmailToClipboard() {
+    async function copyEmailToClipboard() {
       const email = 'rajamet@gmail.com';
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(() => showToast());
-      } else {
-        const tempInput = document.createElement('input');
-        tempInput.value = email;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(email);
         showToast();
+        return;
+      } catch (_) {
+        const input = document.createElement('textarea');
+        input.value = email;
+        input.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none';
+        input.readOnly = true;
+        input.tabIndex = -1;
+        const opener = document.activeElement;
+        document.body.appendChild(input);
+        input.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) {}
+        input.remove();
+        if (opener && opener.isConnected) opener.focus({ preventScroll: true });
+        showToast(copied ? undefined : 'Copy unavailable. Select the email address or use its mail link.');
       }
     }
 
-    function showToast() {
+    let toastTimer = null;
+    function showToast(message = 'Email copied to clipboard (rajamet@gmail.com)') {
       const toast = document.getElementById('copyToast');
+      toast.querySelector('span:last-child').textContent = message;
+      toast.querySelector('.material-symbols-outlined').textContent = message.startsWith('Email copied') ? 'check_circle' : 'info';
       toast.classList.remove('opacity-0', 'translate-y-4');
       toast.classList.add('opacity-100', 'translate-y-0');
-
-      setTimeout(() => {
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
         toast.classList.remove('opacity-100', 'translate-y-0');
         toast.classList.add('opacity-0', 'translate-y-4');
-      }, 3000);
-    }
-
-    // 7. Modals logic
-    function openMonographModal() {
-      if (window.lenis) window.lenis.stop();
-      document.getElementById('monographModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeMonographModal() {
-      if (window.lenis) window.lenis.start();
-      document.getElementById('monographModal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    function prefillContactForm(scopeValue) {
-      const select = document.getElementById('projectScopeSelect');
-      if (select) {
-        select.value = scopeValue;
-      }
-      const textarea = document.getElementById('messageDetailsArea');
-      if (textarea) {
-        textarea.value = 'I would like to inquire about the ' + scopeValue + ' case study and explore collaboration opportunities.';
-      }
-      navigateToHome('contact');
+      }, 4000);
     }
 
     function handleInquirySubmit(e) {
@@ -1548,20 +1513,32 @@
       setTimeout(() => { buttons.forEach(button => { button.disabled = false; }); }, 1500);
     }
 
+    function closeMobileMenu(restoreFocus = true) {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      if (!drawer.open && !menuState) return;
+      const state = menuState;
+      menuState = null;
+      if (drawer.open) drawer.close();
+      document.getElementById('mobileMenuToggle').setAttribute('aria-expanded', 'false');
+      if (!state) return;
+      document.body.style.overflow = state.bodyOverflow;
+      if (window.lenis && !state.lenisWasStopped) window.lenis.start();
+      if (restoreFocus && state.opener.isConnected) state.opener.focus({ preventScroll: true });
+    }
+
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobileMenuDrawer');
-      const isOpening = drawer.classList.contains('hidden');
-      if (isOpening) {
-        drawer.classList.remove('hidden');
-        drawer.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-        if (window.lenis) window.lenis.stop();
-      } else {
-        drawer.classList.add('hidden');
-        drawer.classList.remove('flex');
-        document.body.style.overflow = '';
-        if (window.lenis) window.lenis.start();
-      }
+      if (drawer.open) { closeMobileMenu(); return; }
+      menuState = {
+        opener: document.getElementById('mobileMenuToggle'),
+        bodyOverflow: document.body.style.overflow,
+        lenisWasStopped: Boolean(window.lenis && window.lenis.isStopped)
+      };
+      document.body.style.overflow = 'hidden';
+      if (window.lenis) window.lenis.stop();
+      drawer.showModal();
+      document.getElementById('mobileMenuToggle').setAttribute('aria-expanded', 'true');
+      drawer.querySelector('button').focus({ preventScroll: true });
     }
 
     // Initialize on DOM load
@@ -1575,17 +1552,30 @@
         const count = WorkGallery.sourceCount(badge.dataset.workCount);
         badge.textContent = count ? `${count} Selected Works` : 'Coming soon';
       });
+      document.querySelectorAll('#categoryFilterContainer button').forEach((button, index) => {
+        button.setAttribute('aria-pressed', String(index === 0));
+      });
+      const drawer = document.getElementById('mobileMenuDrawer');
+      drawer.addEventListener('cancel', event => { event.preventDefault(); closeMobileMenu(); });
+      drawer.addEventListener('close', () => { if (!drawer.open) closeMobileMenu(); });
+      drawer.addEventListener('keydown', event => {
+        if (event.key !== 'Tab') return;
+        const controls = [...drawer.querySelectorAll('button, a[href]')];
+        const first = controls[0], last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      });
+      window.matchMedia('(min-width: 1024px)').addEventListener('change', event => {
+        if (event.matches) closeMobileMenu();
+      });
       initScrollObserver();
       handleRouting();
 
       // Keyboard navigation: Escape key closes any active overlay
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-          if (!document.getElementById('monographModal').classList.contains('hidden')) closeMonographModal();
           const drawer = document.getElementById('mobileMenuDrawer');
-          if (drawer && !drawer.classList.contains('hidden')) {
-            toggleMobileMenu();
-          }
+          if (drawer && drawer.open) closeMobileMenu();
         }
       });
     });

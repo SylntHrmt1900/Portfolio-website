@@ -95,5 +95,14 @@ draft link remains available if the new tab does not open, and editing a
 field hides that old link so it cannot silently reuse outdated details.
 Visitors review the draft and press Send themselves; the site never claims
 delivery. No paid form service, email backend, or frontend API key is required.
-The CV action is accurately labeled **Request CV by Email** because no resume
-PDF has been supplied. The UI/UX PDFs are portfolio work, not resume files.
+The hero's **Download CV** link downloads the supplied two-page PDF from
+`Resume/Rajakumar_M_Resume_ATS_Updated.pdf` as `Rajakumar-M-CV.pdf`, without
+opening a request popup or leaving the page. The uploaded PDF remains unchanged.
+The UI/UX PDFs remain separate portfolio work.
+
+Navigation supports keyboard focus on destination headings, announced category
+titles and selected filters, and a native mobile menu with focus trapping,
+Escape dismissal and restored scrolling. The active category stays visible in
+the horizontal switcher on small screens. Copy-email feedback reflects actual
+clipboard success/failure. Optional smooth-scroll loading failure does not
+prevent normal gallery and section navigation.
