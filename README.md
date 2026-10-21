@@ -20,6 +20,9 @@ The existing Pages deployment uses `main` and the repository root.
 
 All 58 supplied works are connected through `WebsiteAssets/gallery/works.js`.
 Tiles show complete, proportionally scaled artwork without titles or captions.
+Galleries use aligned rows with equal-sized frames instead of masonry columns:
+4:3 for AI/branding, 16:9 for video, and taller 4:5 frames for UI/UX/newsletters.
+Artwork is contained within each frame without cropping or stretching.
 Long pages fit inside the tile; the preview's zoom control lets visitors read
 and scroll the detail. The original-file control opens the untouched image,
 PDF, or video in a new tab. Video tiles show a play control; playback starts
@@ -84,8 +87,13 @@ the website. After its successful run, refresh the site to pick up the update.
 
 ## Contact and CV
 
-The contact form validates input, preserves it, and opens an encoded email
-draft. Visitors must send that draft in their email application; the site
-never claims delivery. No email backend or frontend API key is invented.
+The contact form validates and preserves input, then offers **Open in Gmail**
+and **Open Email App**. Both drafts include the recipient, subject, name,
+reply email, scope, and message. Gmail opens in a new tab and may require
+sign-in; the email-app option uses the configured mail handler. A prepared
+draft link remains available if the new tab does not open, and editing a
+field hides that old link so it cannot silently reuse outdated details.
+Visitors review the draft and press Send themselves; the site never claims
+delivery. No paid form service, email backend, or frontend API key is required.
 The CV action is accurately labeled **Request CV by Email** because no resume
 PDF has been supplied. The UI/UX PDFs are portfolio work, not resume files.

@@ -24,6 +24,9 @@ are `portfolio-gallery.js` and `portfolio-gallery.css`.
   artificial project counts, or hover captions.
 - Always contain the full artwork; never crop or stretch it. Long documents
   fit in a bounded preview and support zoom/scroll in the dialog.
+- Keep gallery rows aligned and tile sizes equal within each category. Use
+  4:3 frames for AI/branding, 16:9 for motion, and 4:5 for UI/UX/executive work.
+  Preserve intentional space around contained artwork rather than cropping it.
 - Neutral light plates make transparent dark logos visible without modifying them.
 - Video tiles use actual posters with a play icon, native controls and no autoplay.
 - Keep original artwork and PDF/video files; optimize separate generated copies.
@@ -34,4 +37,6 @@ are `portfolio-gallery.js` and `portfolio-gallery.css`.
 
 Do not add new promotional sections, fictional projects, synthetic SVG work,
 metrics or career claims. Keep the contact form truthful about email-client
-submission and the CV action truthful about requesting a file by email.
+draft handoff through Gmail or the configured email app. Visitors must press
+Send themselves. Keep the CV action truthful about requesting a file by email
+until an actual CV PDF is supplied for a direct download.

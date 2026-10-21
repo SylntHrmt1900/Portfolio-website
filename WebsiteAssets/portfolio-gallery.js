@@ -179,6 +179,7 @@
     close(false);
     artworks = collections[category] || [];
     container.replaceChildren();
+    container.dataset.category = category;
     container.classList.add('work-grid');
     if (!artworks.length) {
       const empty = document.createElement('div');

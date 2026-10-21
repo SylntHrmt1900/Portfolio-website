@@ -48,3 +48,24 @@ all six video players. Video switching/closing stops playback, long UI/UX and
 newsletter previews support fit/zoom/scroll, and transparent logos have readable
 backgrounds. JavaScript syntax and every recorded source/output checksum passed.
 No email was sent during validation.
+
+## Follow-up: aligned galleries and email choices
+
+Masonry columns were replaced with regular responsive rows and equal-sized frames.
+AI/branding use4:3,video16:9,andUI/UX/executive4:5;object-fit:contain preserves
+complete artwork. Display order now follows rows from left to right. Existing
+originals, optimized media, lightbox zoom, and soft transitions are retained.
+
+The inquiry form offers Open in Gmail and Open Email App. Both handoffs include
+the recipient, subject, visitor name/email, scope and full message. Gmail opens
+a new tab; a direct prepared-draft link remains available if that tab is blocked.
+Editing a field hides outdated links. Visitors still review and press Send in
+their chosen mail service. Validation retains their data and prevents brief
+repeat clicks. No email service, account credentials or paid backend is required.
+
+Browser checks passed at1440,1024,768,390and320pixels for equal frames, row
+alignment, full image containment and contact layout. Required/whitespace input,
+URL encoding, popup fallback, stale-draft removal and both handoffs were checked.
+Email sending and signed-in Gmail were not exercised. No CV PDF is present, so
+the existing Request CV by Email action remains truthful; direct downloading
+requires the actual resume file.

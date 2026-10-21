@@ -156,7 +156,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="portfolio-gallery.css?v=3">
+  <link rel="stylesheet" href="portfolio-gallery.css?v=4">
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
@@ -992,7 +992,7 @@
             <!-- Right Dispatch Form (5 cols) in frosted dark glass -->
             <div class="lg:col-span-5 glass-panel-subtle rounded-2xl p-space-lg shadow-md flex flex-col gap-space-sm border border-white/10">
               <h3 class="text-xl font-bold text-[#F5F7FA]">Start a Dialogue</h3>
-              <p class="text-xs text-[#B4BCC8]">This opens a draft in your email app. Review and send it there to complete your inquiry.</p>
+              <p class="text-xs text-[#B4BCC8]">Choose Gmail or your email app to open a draft with your details filled in. Review it and press Send there. Gmail may ask you to sign in.</p>
               
               <form class="flex flex-col gap-space-sm pt-space-xs" id="contactForm" onsubmit="handleInquirySubmit(event)">
                 <div>
@@ -1017,10 +1017,12 @@
                   <label for="messageDetailsArea" class="block text-[11px] font-bold uppercase tracking-widest text-[#B4BCC8] mb-1">Message Details</label>
                   <textarea id="messageDetailsArea" class="w-full px-space-md py-space-sm rounded-lg bg-[#0E1116]/70 backdrop-blur-md border border-white/10 text-sm text-[#F5F7FA] placeholder-[#B4BCC8]/60 focus:outline-none focus:border-[#3B82F6] transition-all resize-none" placeholder="Brief outline of your vision, timeline, and deliverables..." required rows="3" name="message"></textarea>
                 </div>
-                <button class="w-full min-h-[44px] mt-space-xs py-space-md rounded-full bg-[#F5B921] text-[#0E1116] text-sm font-bold hover:bg-[#e6ab18] transition-all shadow-md active:scale-98 cursor-pointer" type="submit">
-                  Open Email Draft →
-                </button>
+                <div class="contact-actions">
+                  <button class="contact-action contact-action-primary" type="submit" name="delivery" value="gmail">Open in Gmail</button>
+                  <button class="contact-action" type="submit" name="delivery" value="email-app">Open Email App</button>
+                </div>
                 <p id="contactFormStatus" role="status" aria-live="polite" class="text-xs text-[#B4BCC8]"></p>
+                <a id="contactDraftLink" hidden rel="noopener noreferrer">Open prepared draft</a>
               </form>
             </div>
 
@@ -1265,7 +1267,7 @@
   <!-- JAVASCRIPT LOGIC & ROUTER                  -->
   <!-- ========================================== -->
   <script src="gallery/works.js?v=3"></script>
-  <script src="portfolio-gallery.js?v=3"></script>
+  <script src="portfolio-gallery.js?v=4"></script>
   <script>
     // Injected Category Data
     const CATEGORIES = {"uiux": {"index": "DIR / 01", "title": "UI/UX & Web Interfaces", "tagline": "Architecting high-conversion digital experiences, enterprise design systems, and responsive web portals with rigorous usability and typographic clarity.", "icon": "devices", "accent": "#3B82F6", "skills": ["Figma", "Design Systems", "Web Architecture", "WCAG 2.1 AAA", "Micro-Interactions"]}, "motion": {"index": "DIR / 02", "title": "Motion & Video Direction", "tagline": "Crafting kinetic visual narratives, corporate brand anthems, 3D broadcast packages, and high-impact motion graphics for international campaigns.", "icon": "movie", "accent": "#F5B921", "skills": ["After Effects", "Premiere Pro", "Kinetic Story", "3D Projection", "Sound Design"]}, "branding": {"index": "DIR / 03", "title": "Brand Systems & Campaigns", "tagline": "Developing enduring corporate identities, multi-continental brand guidelines, cross-platform campaign design, and strategic collateral.", "icon": "auto_awesome", "accent": "#3B82F6", "skills": ["Brand Architecture", "Event Visuals", "Global Guidelines", "Packaging", "Typography"]}, "elearning": {"index": "DIR / 04", "title": "eLearning & Interactive", "tagline": "Pioneering interactive learning architectures, gamified assessment simulators, and pedagogical graphic frameworks at scale.", "icon": "psychology", "accent": "#F5B921", "skills": ["Adobe Animate", "Captivate", "Gamified Modules", "Instructional Design", "Pedagogical UI"]}, "ai": {"index": "DIR / 05", "title": "AI Creative Pipelines", "tagline": "Operationalizing generative AI workflows, synthetic media generation, custom prompt architectures, and AI avatar production for creative teams.", "icon": "neurology", "accent": "#3B82F6", "skills": ["Midjourney v6", "Synthesia & HeyGen", "Prompt Systems", "ComfyUI", "Synthetic Media"]}, "executive": {"index": "DIR / 06", "title": "Executive Presentation & Comms", "tagline": "Transforming dense enterprise data into authoritative keynote presentations, board decks, executive town halls, and internal publication portals.", "icon": "analytics", "accent": "#F5B921", "skills": ["Staffbase", "Executive Keynotes", "Data Narratives", "Boardroom Slides", "HTML Email"]}};
@@ -1526,13 +1528,24 @@
         'Email: ' + String(data.get('email')).trim(),
         'Scope: ' + data.get('scope'), '', String(data.get('message')).trim()
       ].join('\n');
-      const submit = form.querySelector('[type="submit"]');
-      if (submit.disabled) return;
-      submit.disabled = true;
-      document.getElementById('contactFormStatus').textContent =
-        'Your email app should open with a draft. Send it there to complete your inquiry. If nothing opens, email rajamet@gmail.com directly.';
-      window.location.href = 'mailto:rajamet@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      setTimeout(() => { submit.disabled = false; }, 1500);
+      const buttons = [...form.querySelectorAll('[type="submit"]')];
+      if (buttons.some(button => button.disabled)) return;
+      buttons.forEach(button => { button.disabled = true; });
+      const useGmail = !e.submitter || e.submitter.value !== 'email-app';
+      const draftUrl = useGmail
+        ? 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent('rajamet@gmail.com') + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+        : 'mailto:rajamet@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      const draftLink = document.getElementById('contactDraftLink');
+      draftLink.href = draftUrl;
+      draftLink.target = useGmail ? '_blank' : '_self';
+      draftLink.textContent = useGmail ? 'Open prepared Gmail draft' : 'Open prepared email draft';
+      draftLink.hidden = false;
+      document.getElementById('contactFormStatus').textContent = useGmail
+        ? 'Your Gmail draft is ready. Review it in Gmail and press Send. If no tab opened, use the draft link below. You may need to sign in.'
+        : 'Your email draft is ready. Review and send it in your email app. If nothing opens, use the draft link below or email rajamet@gmail.com directly.';
+      if (useGmail) window.open(draftUrl, '_blank', 'noopener,noreferrer');
+      else window.location.href = draftUrl;
+      setTimeout(() => { buttons.forEach(button => { button.disabled = false; }); }, 1500);
     }
 
     function toggleMobileMenu() {
@@ -1555,6 +1568,8 @@
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('contactForm').addEventListener('input', event => {
         if (event.target.setCustomValidity) event.target.setCustomValidity('');
+        document.getElementById('contactDraftLink').hidden = true;
+        document.getElementById('contactFormStatus').textContent = '';
       });
       document.querySelectorAll('[data-work-count]').forEach(badge => {
         const count = WorkGallery.sourceCount(badge.dataset.workCount);
