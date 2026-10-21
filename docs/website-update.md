@@ -52,7 +52,7 @@ No email was sent during validation.
 ## Follow-up: aligned galleries and email choices
 
 Masonry columns were replaced with regular responsive rows and equal-sized frames.
-AI/branding use4:3,video16:9,andUI/UX/executive4:5;object-fit:contain preserves
+AI/branding use 4:3, video 16:9, and UI/UX/executive 4:5; object-fit: contain preserves
 complete artwork. Display order now follows rows from left to right. Existing
 originals, optimized media, lightbox zoom, and soft transitions are retained.
 
@@ -63,7 +63,7 @@ Editing a field hides outdated links. Visitors still review and press Send in
 their chosen mail service. Validation retains their data and prevents brief
 repeat clicks. No email service, account credentials or paid backend is required.
 
-Browser checks passed at1440,1024,768,390and320pixels for equal frames, row
+Browser checks passed at 1440, 1024, 768, 390 and 320 pixels for equal frames, row
 alignment, full image containment and contact layout. Required/whitespace input,
 URL encoding, popup fallback, stale-draft removal and both handoffs were checked.
 Email sending and signed-in Gmail were not exercised. No CV PDF is present, so
