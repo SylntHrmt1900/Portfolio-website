@@ -1,0 +1,2110 @@
+{
+  "generator": "scripts/prepare_gallery.py",
+  "schema_version": 1,
+  "tools": {
+    "pillow": "12.3.0",
+    "pymupdf": "1.26.6",
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "settings": {
+    "thumbnail_bounds": [
+      1000,
+      6000
+    ],
+    "thumbnail_webp_quality": 82,
+    "full_image_bounds": [
+      2400,
+      12000
+    ],
+    "full_webp_quality": 88,
+    "pdf_pixels_per_point": 1,
+    "video_crf": 24,
+    "video_threads": 2,
+    "video_maximum_dimension": 1920,
+    "crop": false,
+    "upscale": false,
+    "video_audio": "copy AAC; otherwise AAC 160k",
+    "video_faststart": true,
+    "color_profile": "Convert embedded ICC profiles to sRGB before WebP export"
+  },
+  "totals": {
+    "original_files": 58,
+    "original_images": 48,
+    "original_pdfs": 4,
+    "pdf_pages": 4,
+    "original_videos": 6,
+    "gallery_items": 58,
+    "items_per_category": {
+      "uiux": 11,
+      "motion": 6,
+      "branding": 15,
+      "elearning": 0,
+      "ai": 16,
+      "executive": 10
+    },
+    "original_bytes": 160117694,
+    "generated_files": 116,
+    "generated_bytes": 39725348,
+    "thumbnail_bytes": 5288800,
+    "full_image_bytes": 11481968,
+    "optimized_video_bytes": 22954580
+  },
+  "sources": [
+    {
+      "path": "AI/042026 - Social - Agentic AI for Enterprise Operations.jpg",
+      "bytes": 2357329,
+      "sha256": "cd120d5adef1d704067e8ff9776b6de75f5f6504eee3dcbe603622884fdb94ec",
+      "category": "ai",
+      "gallery_ids": [
+        "agentic-enterprise-landscape"
+      ],
+      "kind": "image",
+      "width": 6000,
+      "height": 3374,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/agentic-enterprise-landscape.webp",
+          "bytes": 315798,
+          "sha256": "7a7086318ccb79bddb2005fce0f9ab62098003fffd5155b4d8fed19a5bd3b1da",
+          "role": "full",
+          "width": 2400,
+          "height": 1350
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/agentic-enterprise-landscape-thumb.webp",
+          "bytes": 63182,
+          "sha256": "4079dafa909a6ebc924da66ac3d9d22090b1eae9ddd2045afc0ae0c5a1bf3aad",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 562
+        }
+      ]
+    },
+    {
+      "path": "AI/042026 - Social - Agentic AI for Enterprise Operations2.jpg",
+      "bytes": 2423171,
+      "sha256": "4eb8194652ef7cfad50356eea6c53d21354f300b0479c480c8cac169d0e5cbf6",
+      "category": "ai",
+      "gallery_ids": [
+        "agentic-enterprise-portrait"
+      ],
+      "kind": "image",
+      "width": 3750,
+      "height": 4686,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/agentic-enterprise-portrait.webp",
+          "bytes": 626872,
+          "sha256": "50d7ae2266389bad55f9d1568d6b579142cb3a99d8ddf9fbb3c004b249725429",
+          "role": "full",
+          "width": 2400,
+          "height": 2999
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/agentic-enterprise-portrait-thumb.webp",
+          "bytes": 142058,
+          "sha256": "fa11e30c55d8edf289b3b79eb6ce54702216d5798bf0c26064e6765dcfb511a5",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1250
+        }
+      ]
+    },
+    {
+      "path": "AI/082026 - Graphic Assets - HRiX Evergreen Content 1920x1080.jpg",
+      "bytes": 2123455,
+      "sha256": "8c1c9bbfbccdde3f585a8d5e3bc00c6667e74e9a2655b6d14b191a0faf51804b",
+      "category": "ai",
+      "gallery_ids": [
+        "hrix-one-window"
+      ],
+      "kind": "image",
+      "width": 6000,
+      "height": 3374,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-one-window.webp",
+          "bytes": 244978,
+          "sha256": "27c24294e81b4424891d43fd9556db0c3abbdb6c5c52018199fe5621312814d5",
+          "role": "full",
+          "width": 2400,
+          "height": 1350
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-one-window-thumb.webp",
+          "bytes": 64010,
+          "sha256": "1914f3444f59c2e160b09a6a7a9b62bd771617148c0577706af609d70c5135d2",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 562
+        }
+      ]
+    },
+    {
+      "path": "AI/082026 - Graphic Assets - HRiX Evergreen Content 1920x1080.png",
+      "bytes": 3557315,
+      "sha256": "33b1f217d5d864b0a88a954bd523df8be575ea3ac27ad2a8cac3d0504d1d0ae5",
+      "category": "ai",
+      "gallery_ids": [
+        "hrix-search"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-search.webp",
+          "bytes": 166010,
+          "sha256": "16d097a59f9ea48147f10ee5fefc59f2672af34d906419a54a5ca76c5181e3ed",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-search-thumb.webp",
+          "bytes": 55418,
+          "sha256": "3a9eab88bfb264b0ca51a621f8a509d581529a1d34e78895092dd7068d37d1a3",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/082026 - Graphic Assets - HRiX Evergreen Content 1920x1080_2.jpg",
+      "bytes": 2354299,
+      "sha256": "9f3fcf081096e9fc50c41ffa322482c3eac38f89f526683eb022ba63c45d07db",
+      "category": "ai",
+      "gallery_ids": [
+        "hrix-one-place"
+      ],
+      "kind": "image",
+      "width": 6000,
+      "height": 3374,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-one-place.webp",
+          "bytes": 271552,
+          "sha256": "01a887083d660ef155d3ce66599f8690cf0ec3bfbca0cf107ccbf8709ea587d7",
+          "role": "full",
+          "width": 2400,
+          "height": 1350
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hrix-one-place-thumb.webp",
+          "bytes": 63346,
+          "sha256": "4c1caf4359510bf90fb33f2fad78d97fcfd65b57d2d1f3ab18a5d248bc586142",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 562
+        }
+      ]
+    },
+    {
+      "path": "AI/1-32.png",
+      "bytes": 2339831,
+      "sha256": "2bc761b03a1574e87872992c773a9aa63528c17afa2e3500c1ed59a7033f2cc1",
+      "category": "ai",
+      "gallery_ids": [
+        "nextwave-brief-update"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-brief-update.webp",
+          "bytes": 144166,
+          "sha256": "2787d2226551365d5f65b88e69f947dd190f5a31d024b074c1a6dc138e0771dd",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-brief-update-thumb.webp",
+          "bytes": 47168,
+          "sha256": "64e8d503b143cc06da617cb7f5f1822cd5d2ee9ccd3881e003716013fce9c4f3",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/1.png",
+      "bytes": 2978752,
+      "sha256": "259b3c2ecb056d05a223fd5e149068eed1dd9cb995bd779be968c2988f58b829",
+      "category": "ai",
+      "gallery_ids": [
+        "hypercare-halloween"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-halloween.webp",
+          "bytes": 220762,
+          "sha256": "64fbf5441003df6a5a37dcce3a9da78e3014a8c69f37402d3893536ff6f020f2",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-halloween-thumb.webp",
+          "bytes": 76142,
+          "sha256": "231751c02f8a1146409cac1d28cf91b980969fbc5217c91e64bd682509e59817",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/1 3.png",
+      "bytes": 2808408,
+      "sha256": "6784a13c6166945fb5ced7f925e12a73a4a30b717ad93cbaa7971e018c6e1f81",
+      "category": "ai",
+      "gallery_ids": [
+        "license-puppy"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/license-puppy.webp",
+          "bytes": 146464,
+          "sha256": "cd4bc52386ace7af3c5a8ac207dd31f5cc947ce901242153ac3ad41b295fc524",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/license-puppy-thumb.webp",
+          "bytes": 45766,
+          "sha256": "e55ac7c44d375bf98f531b528011d575bc4ae5e75ca80d4e2c8050542cb2e275",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/1 4.png",
+      "bytes": 1295171,
+      "sha256": "2ba283420d66dc5462933f8d49e37b54cb4267bf07b59dcd93918c7639a335ac",
+      "category": "ai",
+      "gallery_ids": [
+        "ix-hero-roleplay"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 1500,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/ix-hero-roleplay.webp",
+          "bytes": 92654,
+          "sha256": "9dfa28a63b48660332a26f1fbc6aabf7f8e21df580c02781b622ec3910a0786d",
+          "role": "full",
+          "width": 1200,
+          "height": 1500
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/ix-hero-roleplay-thumb.webp",
+          "bytes": 56532,
+          "sha256": "f399e0fbaed5f188ba1edba7caf750fe89cc71c94477ec87862afc1450785991",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1250
+        }
+      ]
+    },
+    {
+      "path": "AI/1-35.png",
+      "bytes": 2905264,
+      "sha256": "c0791cbbf65d0e13287e3c5e1f9a38286b417ed95005db8d4d79238c7e9773d8",
+      "category": "ai",
+      "gallery_ids": [
+        "nextwave-shakespeare-desk"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-shakespeare-desk.webp",
+          "bytes": 227424,
+          "sha256": "dd75012daa8fb8e6fdbebea7d4bb5a17d1f017389558ebe85903166dfb840f94",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-shakespeare-desk-thumb.webp",
+          "bytes": 65654,
+          "sha256": "c98c24a94ef16d9efd465807455d896c141ddf390751edf3197c8a306c0bdb85",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/1-36.png",
+      "bytes": 2626885,
+      "sha256": "9275399564b2a339d51b2dfc56fece1ebc033cebf2c0d39d82004ac35a5b17c7",
+      "category": "ai",
+      "gallery_ids": [
+        "nextwave-shakespeare-office"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-shakespeare-office.webp",
+          "bytes": 197472,
+          "sha256": "2ce3651fd9308caf09e7dc33e176e7b14aa4425a3f25d76a41033d95a3a7f48e",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-shakespeare-office-thumb.webp",
+          "bytes": 64588,
+          "sha256": "2d2b1e6f542c3c57271cdfc6c7d6d9e7801efb99c887e0e0a3318fab8bed9f55",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/1-39.png",
+      "bytes": 2637326,
+      "sha256": "aefd905abf7c761779655597d943156d43f59e89228656e9e50b08643bff0a36",
+      "category": "ai",
+      "gallery_ids": [
+        "nextwave-make-it-shorter"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-make-it-shorter.webp",
+          "bytes": 207302,
+          "sha256": "01d3f0d533362b3aaf03cf71e649971ca81e9af0014d3344b6375d95a0eece81",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/nextwave-make-it-shorter-thumb.webp",
+          "bytes": 68946,
+          "sha256": "f5ad61b7b1aaed6e3d01639b936fa7c24c07221de0965e3d23f245da01e6774d",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/17.png",
+      "bytes": 3481613,
+      "sha256": "2e8b217f85b830d7f55daaafde7078e1f35b42e82ae4f00047308524d2c6bbba",
+      "category": "ai",
+      "gallery_ids": [
+        "hypercare-forest"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-forest.webp",
+          "bytes": 203248,
+          "sha256": "d7c6599619555184c5315cf189d1cd8dc25708d9bc75c279f64d7ad59cc4c14e",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-forest-thumb.webp",
+          "bytes": 60408,
+          "sha256": "5b49f18b15f2041facef76ef229d603e9457628306452f482899407c37b5dc8f",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/2 2.png",
+      "bytes": 2487137,
+      "sha256": "8adfb0114f62609aa8b87e05dfcaa54c9317846aa5f64de25759c3313f290071",
+      "category": "ai",
+      "gallery_ids": [
+        "hypercare-frankenstein"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-frankenstein.webp",
+          "bytes": 187440,
+          "sha256": "17e4619972c597db2e31f1c9f6adc8d11589d85ed86bf4fd4701dde12803b79a",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/hypercare-frankenstein-thumb.webp",
+          "bytes": 55750,
+          "sha256": "439de5f98926d4b1117dd93c83f87d28f1b2779ce25348d76f4b34adbbdfa508",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/2.png",
+      "bytes": 3423501,
+      "sha256": "97bec690fd484a635c7d6e5ef106999f2ba2ea88c4239e348e1e3ee384a81a45",
+      "category": "ai",
+      "gallery_ids": [
+        "linkedin-learning-waiting"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/linkedin-learning-waiting.webp",
+          "bytes": 169028,
+          "sha256": "c690468e6202f4aa6defa98bccaa675c9286fdd9c7503f9f5fc616f078e1805a",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/linkedin-learning-waiting-thumb.webp",
+          "bytes": 56780,
+          "sha256": "b674384d1ff4e5d355f9119b8f27a3fcd23d35af7da245e88ad051b4f2f23bd7",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "AI/Game-Changer Day_Teaser_1080x1920.png",
+      "bytes": 3479909,
+      "sha256": "e31d07baa18de55d039fabc57b6265a9eb78b176735494c7cfc6196945841ff3",
+      "category": "ai",
+      "gallery_ids": [
+        "game-changer-legend"
+      ],
+      "kind": "image",
+      "width": 1080,
+      "height": 1920,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/ai/game-changer-legend.webp",
+          "bytes": 218786,
+          "sha256": "090316ec26c13d772b8939c685df4a96114403cedd1828a6b13ed98eafe6e9a7",
+          "role": "full",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/ai/game-changer-legend-thumb.webp",
+          "bytes": 142644,
+          "sha256": "ae64089cc6136a4711d214375621dcda29705d81bf777e98465c4a5081b33f77",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1778
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/012025_Logo_WiseOwls_GRG_LightBG-V2.png",
+      "bytes": 70701,
+      "sha256": "122df26a7ae78ca0e206db6088d04404ca590837520d1f59be00f7d418ad2d57",
+      "category": "branding",
+      "gallery_ids": [
+        "wiseowls-logo"
+      ],
+      "kind": "image",
+      "width": 2702,
+      "height": 402,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/wiseowls-logo.webp",
+          "bytes": 86732,
+          "sha256": "73a1576680186553a5f8c48c690c8478994c1c5870ac550ff45f00c43d9d6960",
+          "role": "full",
+          "width": 2400,
+          "height": 357
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/wiseowls-logo-thumb.webp",
+          "bytes": 30246,
+          "sha256": "e00dd795f33edaaacb4cae15074638aefdcc163e181e78183d393907dbc4f71c",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 149
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/032724_BuzzHub_Logo_NewCo-(1).png",
+      "bytes": 16302,
+      "sha256": "5bd1f23d462f6892de3e3ffa7caac2e0db0beed53903af99ffd8e6be407e105d",
+      "category": "branding",
+      "gallery_ids": [
+        "buzzhub-logo"
+      ],
+      "kind": "image",
+      "width": 1016,
+      "height": 253,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/buzzhub-logo.webp",
+          "bytes": 16006,
+          "sha256": "c3d2249b52dfafaf772d1ff0ff810a99463aecb8cbd12ea2e95c9a8fb3abc59c",
+          "role": "full",
+          "width": 1016,
+          "height": 253
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/buzzhub-logo-thumb.webp",
+          "bytes": 15858,
+          "sha256": "caf6d4b9729c727c9f8b6ac76d913af5026e5cf5f880a70ed8da99885509bc58",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 249
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/33 2.png",
+      "bytes": 103668,
+      "sha256": "8d00ba867839d0e7621ab714400112e89146b82ae975ab346ec3a4184d0829bf",
+      "category": "branding",
+      "gallery_ids": [
+        "legends-talent-contest"
+      ],
+      "kind": "image",
+      "width": 600,
+      "height": 600,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/legends-talent-contest.webp",
+          "bytes": 28968,
+          "sha256": "45dcec40e789aa06693bfc341dbc8b96e9424ee1a6fbfad00c1f7cfbf66b305a",
+          "role": "full",
+          "width": 600,
+          "height": 600
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/legends-talent-contest-thumb.webp",
+          "bytes": 23852,
+          "sha256": "d3937a0326beda74dd76edd997b64202e650d52c54a61f4f1dc2a4564b8015ed",
+          "role": "thumbnail",
+          "width": 600,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/4.png",
+      "bytes": 6687664,
+      "sha256": "4bc18101c4586e0fc6f0a3eedec6ee74e353378ea9fd898e3c49d4cfc55df28c",
+      "category": "branding",
+      "gallery_ids": [
+        "hrix-manager-evaluation"
+      ],
+      "kind": "image",
+      "width": 2560,
+      "height": 2260,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/hrix-manager-evaluation.webp",
+          "bytes": 306484,
+          "sha256": "7ed840cfa896679ae48b732a261eb1f7b751006aae2ce04a52fccc1e0a1be5d9",
+          "role": "full",
+          "width": 2400,
+          "height": 2119
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/hrix-manager-evaluation-thumb.webp",
+          "bytes": 82088,
+          "sha256": "733ef699de6513d84b3eafb7c1f8f310ff97c092dd5eed86b80eef7a899e1cac",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 883
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/5Tips_Banner_Revised2.png",
+      "bytes": 507393,
+      "sha256": "fd032e8acffc928a2bafda98d4c98e0178fe683620ec27ee4ed1e261ea69e8e9",
+      "category": "branding",
+      "gallery_ids": [
+        "patient-member-experiences"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 628,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/patient-member-experiences.webp",
+          "bytes": 73542,
+          "sha256": "d266b5d1bcebb72a63c4147a1acb0fd16dd75da96e130b8057852adf2c227089",
+          "role": "full",
+          "width": 1200,
+          "height": 628
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/patient-member-experiences-thumb.webp",
+          "bytes": 46634,
+          "sha256": "d0b492bf3f1aa4c09b691a9c7e9bced897bf9ebf35e2c8dc659e3f03e4efb9bb",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 523
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/7.png",
+      "bytes": 2900356,
+      "sha256": "ef7fc86db95c8d2840fd909f5cb70a83ed1f1d87b13e96ca9c8d33d440420eec",
+      "category": "branding",
+      "gallery_ids": [
+        "saved-courses"
+      ],
+      "kind": "image",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/saved-courses.webp",
+          "bytes": 181846,
+          "sha256": "3cc201cc6318d6c90a4418929f90cfe63d4fc3e40bb4da423f9ea76a383040ff",
+          "role": "full",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/saved-courses-thumb.webp",
+          "bytes": 54416,
+          "sha256": "6c3fdf2efac48c72d0ebb5e66125c829bc354132659a5fa053d60493914a41c1",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 563
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/Artboard 4 copy 16.png",
+      "bytes": 439401,
+      "sha256": "258711790144ae68ae219e06917ca56af275086fc64e7b28fa7243cd2015b33f",
+      "category": "branding",
+      "gallery_ids": [
+        "ixhero-social-post"
+      ],
+      "kind": "image",
+      "width": 721,
+      "height": 1138,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/ixhero-social-post.webp",
+          "bytes": 61786,
+          "sha256": "e28a5e43c2f728fab85e4f1576af818c0a266632df46cf0726169dfd4c450654",
+          "role": "full",
+          "width": 721,
+          "height": 1138
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/ixhero-social-post-thumb.webp",
+          "bytes": 49040,
+          "sha256": "9e09fc48e00c4634d00e292495686722eaff9ed6b7e86cb29b3456c3583bd34a",
+          "role": "thumbnail",
+          "width": 721,
+          "height": 1138
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/Culture-Roadshow-Graphic.png",
+      "bytes": 15152,
+      "sha256": "b96141f440321f8fafb98d707cf5176d66fa6af52471b87311023a1a13b8eef0",
+      "category": "branding",
+      "gallery_ids": [
+        "culture-roadshow"
+      ],
+      "kind": "image",
+      "width": 619,
+      "height": 343,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/culture-roadshow.webp",
+          "bytes": 14230,
+          "sha256": "20ef2f6339d447b7112bf47a35dfd342f63112726229fb5eef605ef72ecdd92f",
+          "role": "full",
+          "width": 619,
+          "height": 343
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/culture-roadshow-thumb.webp",
+          "bytes": 11928,
+          "sha256": "a652151639c39da716bd9b9243f3cd3de6abe54e7b64b8a928bfbda9a7ffdcdc",
+          "role": "thumbnail",
+          "width": 619,
+          "height": 343
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/DBR Blue.png",
+      "bytes": 33772,
+      "sha256": "aa39d48e6ec7d54bcbad2e3439487abf74ff5b0ac40fad5289a3dfff907b3b10",
+      "category": "branding",
+      "gallery_ids": [
+        "design-build-run"
+      ],
+      "kind": "image",
+      "width": 1153,
+      "height": 1153,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/design-build-run.webp",
+          "bytes": 21390,
+          "sha256": "e19ddcb018f873fc9125b1237ac5a740d0c453d6acbec770618994991c9b3ed0",
+          "role": "full",
+          "width": 1153,
+          "height": 1153
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/design-build-run-thumb.webp",
+          "bytes": 33126,
+          "sha256": "2c4917ef5a81972773fae4a8f19bf172c20a87578ca038eb6f5d957b3dc294d9",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/GTALogoFinal_320x104px.png",
+      "bytes": 5207,
+      "sha256": "e28b795465a9dae5e75f82aa790cc38933dacfefa04a41e73ff1f3c025de0c78",
+      "category": "branding",
+      "gallery_ids": [
+        "gatehouse-associates"
+      ],
+      "kind": "image",
+      "width": 320,
+      "height": 104,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/gatehouse-associates.webp",
+          "bytes": 5346,
+          "sha256": "c998a2ad2bed30e6044bd47eece7aca5354ecf5e7efb0e116cedafd1992731a2",
+          "role": "full",
+          "width": 320,
+          "height": 104
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/gatehouse-associates-thumb.webp",
+          "bytes": 4740,
+          "sha256": "d550596a67090f0b447f11c9d5961c84c078e6fe04cc14422720119c30947a6e",
+          "role": "thumbnail",
+          "width": 320,
+          "height": 104
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/IX-Hero_Prelaunch_Carousel_1.png",
+      "bytes": 1202223,
+      "sha256": "605705abe81635e2070c28f75248dc537973b60994c1420f0b467770e7aeed7e",
+      "category": "branding",
+      "gallery_ids": [
+        "cognitive-overload-audit"
+      ],
+      "kind": "image",
+      "width": 1080,
+      "height": 1350,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/cognitive-overload-audit.webp",
+          "bytes": 123004,
+          "sha256": "6a1d1694284343b77c50d8930f1ff2cc4defa6b0c962a883b08dcae2c82dcfbf",
+          "role": "full",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/cognitive-overload-audit-thumb.webp",
+          "bytes": 84196,
+          "sha256": "1c03f6f5e76e7a6847c0d4c270bf22746ac2217cfb6ece4c2c3d2d271873d90a",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1250
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/NewCo_PC-Logo_Badge_FullColor.png",
+      "bytes": 367006,
+      "sha256": "75c267ad9813ea0c186bae1c0715158316a2537799046c6a996562d49797cd75",
+      "category": "branding",
+      "gallery_ids": [
+        "presidents-club"
+      ],
+      "kind": "image",
+      "width": 4167,
+      "height": 4167,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/presidents-club.webp",
+          "bytes": 278868,
+          "sha256": "da3543377be54ea8a1bf7932f4e5e69c508ba8270bb09cf51c9ba165e4d03720",
+          "role": "full",
+          "width": 2400,
+          "height": 2400
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/presidents-club-thumb.webp",
+          "bytes": 100540,
+          "sha256": "8f44a8e90057fc5a3b54e187bf9aee66a40ea71f0546c5dd06e88b702b45ce8f",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/ReimaginePatientCX_Li_Opt2.png",
+      "bytes": 528744,
+      "sha256": "b97f17e8301c6e003dba8b73dc5888bb06b97a689010ae4c81c254fbc7245551",
+      "category": "branding",
+      "gallery_ids": [
+        "reimagine-patient-cx"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 628,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/reimagine-patient-cx.webp",
+          "bytes": 57512,
+          "sha256": "54122f8cab53e1c33e750557b3ac069aad26f28e23a5d7ec39b87b1084880c56",
+          "role": "full",
+          "width": 1200,
+          "height": 628
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/reimagine-patient-cx-thumb.webp",
+          "bytes": 34712,
+          "sha256": "1d7f28e5bf501510150152edfaba15c7ccaefcbfac5820cbbb1e8b8a3c8baa31",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 523
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/badge_LCNCNew.png",
+      "bytes": 8896,
+      "sha256": "8be06bca45b763233357185ef9841e669bad7956b3459c877200f11f6a15bbb5",
+      "category": "branding",
+      "gallery_ids": [
+        "lcnc-citizen-developer"
+      ],
+      "kind": "image",
+      "width": 300,
+      "height": 100,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/lcnc-citizen-developer.webp",
+          "bytes": 6766,
+          "sha256": "5e52f50d8f97e9faa7460000477f2f135c73ff56182c7cd9b4bb74d708cf3a9c",
+          "role": "full",
+          "width": 300,
+          "height": 100
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/lcnc-citizen-developer-thumb.webp",
+          "bytes": 5718,
+          "sha256": "dd78078af2fdd3229745c03458f45232b32dc0ae3aa62eb1360b898c4d1eca04",
+          "role": "thumbnail",
+          "width": 300,
+          "height": 100
+        }
+      ]
+    },
+    {
+      "path": "Brand Systems/iX-Hero-Samples_2-1.png",
+      "bytes": 259291,
+      "sha256": "175822d4db98bd6154ae315a4d3cc01d8db53c9b09a66ddd4da49677771644a2",
+      "category": "branding",
+      "gallery_ids": [
+        "meet-our-heroes"
+      ],
+      "kind": "image",
+      "width": 720,
+      "height": 656,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/branding/meet-our-heroes.webp",
+          "bytes": 54950,
+          "sha256": "9255deb35125e5d45e06eeda50be1576b160816b123a5d93094081e6ac599f59",
+          "role": "full",
+          "width": 720,
+          "height": 656
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/branding/meet-our-heroes-thumb.webp",
+          "bytes": 44688,
+          "sha256": "107b70c5f19e02e87d8c0d310fe3e81571e4d8581f868fbb3e945cc6bfc1db3d",
+          "role": "thumbnail",
+          "width": 720,
+          "height": 656
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/082026 - Your Week in 5 - Email newsletter refresh.png",
+      "bytes": 4351064,
+      "sha256": "7158bed887fecdd647410c6afeecc16212369723cbf3248e408e2548df9b6b6c",
+      "category": "executive",
+      "gallery_ids": [
+        "your-week-in-five-refresh"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 6250,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-refresh.webp",
+          "bytes": 792416,
+          "sha256": "f8f9d0c042716950d24b372281c174bb72e76e91d0d0afc41a6273f629dc08fc",
+          "role": "full",
+          "width": 1200,
+          "height": 6250
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-refresh-thumb.webp",
+          "bytes": 495646,
+          "sha256": "63d17e185a98ab15de2435b61502027d8179fb225ba7ccf73e8fd6612bccc4f0",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 5208
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/1 3.png",
+      "bytes": 1414306,
+      "sha256": "83f8b59ca3932b0d40266c94ae1dcbde6a680bf39cf822c5c7abf9bb4449a376",
+      "category": "executive",
+      "gallery_ids": [
+        "linkedin-learning-email-one"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 2633,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/linkedin-learning-email-one.webp",
+          "bytes": 205830,
+          "sha256": "f27307871750bb83c7b64cbfb52a6317ca2756634d359a53f91cdcb7fa3a91ba",
+          "role": "full",
+          "width": 1200,
+          "height": 2633
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/linkedin-learning-email-one-thumb.webp",
+          "bytes": 129170,
+          "sha256": "bca1072c25f296057ea3a6f0b9e6e977cdfa2fca38fa48e55670e81e4d485568",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2194
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/2 3.png",
+      "bytes": 1509639,
+      "sha256": "ce370bc462dca7e74ad0641138faf47d885815249c1330fcbfdaf88f6abd02e1",
+      "category": "executive",
+      "gallery_ids": [
+        "linkedin-learning-email-two"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 2633,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/linkedin-learning-email-two.webp",
+          "bytes": 220002,
+          "sha256": "12c0a927a71404c9c30f155eecb1ea4ce4ca90b4744fdf2356a734177d63e4b9",
+          "role": "full",
+          "width": 1200,
+          "height": 2633
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/linkedin-learning-email-two-thumb.webp",
+          "bytes": 138550,
+          "sha256": "8512a1443f089f493093d77dd5335e7fb42506e560c7dad9b9a8288659597385",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2194
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/2.png",
+      "bytes": 4217157,
+      "sha256": "8f0d44c9f64ccb1230ab09190dc045dc6c16a8251f20bbe524b02040a56d4184",
+      "category": "executive",
+      "gallery_ids": [
+        "your-week-in-five-dark"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 5383,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-dark.webp",
+          "bytes": 667666,
+          "sha256": "8f61719f860f47c4b9cb0b5f70307733ca4f1794a081aff0c254577abded579d",
+          "role": "full",
+          "width": 1200,
+          "height": 5383
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-dark-thumb.webp",
+          "bytes": 411016,
+          "sha256": "d9974cdcbc472151ac3436b2144f813905eaadbf63dae1998de7c7d6d7f45288",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 4486
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/3.png",
+      "bytes": 4012753,
+      "sha256": "cff1bd3d9ec2a1bb3a304a01f10b6716f06e6e8135d645063a0bbab481f06c65",
+      "category": "executive",
+      "gallery_ids": [
+        "your-week-in-five-light"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 5374,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-light.webp",
+          "bytes": 663722,
+          "sha256": "043f21c8461867204578b7c3fd667a06d7913e7a70adbd93028567ccfa607b5b",
+          "role": "full",
+          "width": 1200,
+          "height": 5374
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/your-week-in-five-light-thumb.webp",
+          "bytes": 407324,
+          "sha256": "e98d9c8cca5944c5a8159a0e414a85067f275286cb9bfbbf0f4152f7a69fb429",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 4478
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/BuzzHub - Newsletters 2.png",
+      "bytes": 2877147,
+      "sha256": "6f3f076480228b8dcc45ffee9113f753710a6bbc315f8db4a47954866bf3539d",
+      "category": "executive",
+      "gallery_ids": [
+        "buzzhub-newsletter"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 3000,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/buzzhub-newsletter.webp",
+          "bytes": 198820,
+          "sha256": "bbf5da2715af4c36bc62d43b674084b0e75a39d4737e8ef909d925866ce08dc6",
+          "role": "full",
+          "width": 1200,
+          "height": 3000
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/buzzhub-newsletter-thumb.webp",
+          "bytes": 125924,
+          "sha256": "ad02aae5be38df810e47ee291fbd485acec5bf491b2f87d426186bde3c716feb",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2500
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/Email_LeadershipAcademy_Director.png",
+      "bytes": 200466,
+      "sha256": "0facc0c1d41de1a0afb1cf10719ae63e45ad0c2cbb60405a085ebea7574e5580",
+      "category": "executive",
+      "gallery_ids": [
+        "leadership-academy-director"
+      ],
+      "kind": "image",
+      "width": 800,
+      "height": 1323,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/leadership-academy-director.webp",
+          "bytes": 108550,
+          "sha256": "60a90cb7f73aae4a399bb2b8c92a21063ce4223673019abcaac9dc0ff1c0d4c2",
+          "role": "full",
+          "width": 800,
+          "height": 1323
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/leadership-academy-director-thumb.webp",
+          "bytes": 91096,
+          "sha256": "8b06668cb11fc93dac3312ba1dfcdb73d1511fc09cb07cd7cc06666d86fc9535",
+          "role": "thumbnail",
+          "width": 800,
+          "height": 1323
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/Email_LeadershipAcademy_SrManager.png",
+      "bytes": 191734,
+      "sha256": "08055132873fa2f94e65d92d8eac2b3cc46f15ffc65ae9189fe6f532b76019f0",
+      "category": "executive",
+      "gallery_ids": [
+        "leadership-academy-manager"
+      ],
+      "kind": "image",
+      "width": 800,
+      "height": 1149,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/leadership-academy-manager.webp",
+          "bytes": 90004,
+          "sha256": "a9d50d519cd2711c332d6e3f39c47dbb81537fd7dc5c6937ecc8fccad7834cde",
+          "role": "full",
+          "width": 800,
+          "height": 1149
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/leadership-academy-manager-thumb.webp",
+          "bytes": 75518,
+          "sha256": "7d6ef9aa9a4a7a3926de257cf6d42c447c3c23cf4d5181a084db374767a07540",
+          "role": "thumbnail",
+          "width": 800,
+          "height": 1149
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/Final Newsletter Layout.png",
+      "bytes": 2536115,
+      "sha256": "a8362ee9a406bccac3b91fdd7e17c1d4f8b4181ea3c440484c507fe0d3b14655",
+      "category": "executive",
+      "gallery_ids": [
+        "buzzhub-newsletter-layout"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 3000,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/buzzhub-newsletter-layout.webp",
+          "bytes": 182150,
+          "sha256": "2ab8224e54b7b499cec6715ec7b18f329b5991422eb0fd58bcc069261dc7b4db",
+          "role": "full",
+          "width": 1200,
+          "height": 3000
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/buzzhub-newsletter-layout-thumb.webp",
+          "bytes": 116790,
+          "sha256": "e7bdb7eb393264ec5743d763915f2fa4bdf3494988cefe9803aa8d87d1354fb8",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2500
+        }
+      ]
+    },
+    {
+      "path": "Executive Presentation/iX Hello Newsletter .png",
+      "bytes": 1342382,
+      "sha256": "6fce4886664a1877ef0bac7172a20cf04d0b3494e95fe57516855647af65c535",
+      "category": "executive",
+      "gallery_ids": [
+        "ix-hello-newsletter"
+      ],
+      "kind": "image",
+      "width": 1200,
+      "height": 3028,
+      "mode": "RGB",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/executive/ix-hello-newsletter.webp",
+          "bytes": 368452,
+          "sha256": "c759f06a0ef608116a3901903d40a6351bb4ca14eeec62161a69faac37e8da85",
+          "role": "full",
+          "width": 1200,
+          "height": 3028
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/executive/ix-hello-newsletter-thumb.webp",
+          "bytes": 235870,
+          "sha256": "741aff57312e4f5c66767cb4ad76092153015bbdff1a9663482299dbe4a9741c",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2523
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/012026 - Adobe AI Ecommerce Virtual Partner Event.pdf",
+      "bytes": 1107803,
+      "sha256": "80a6102c420e3ddb130f88755cba795aa2cfc8de4fa0e4a91b3e859d6fbf668f",
+      "category": "uiux",
+      "gallery_ids": [
+        "adobe-ai-ecommerce-event-page-1"
+      ],
+      "kind": "pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "page": 1,
+          "points": [
+            1440.0,
+            2400.0
+          ],
+          "rendered_pixels": [
+            1440,
+            2400
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/adobe-ai-ecommerce-event-page-1.webp",
+          "bytes": 201522,
+          "sha256": "7dd4928d3fc278d00efecb1387624628d3bdd0a94a50d788299423a4d376ab3c",
+          "role": "full",
+          "width": 1440,
+          "height": 2400
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/adobe-ai-ecommerce-event-page-1-thumb.webp",
+          "bytes": 101884,
+          "sha256": "ee737f57395a4b25eeee54324a1d993cd1cbb5cdee6b2206c76dcce756901a36",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 1667
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/082026 - NR Phase 2 Campaign Landing Page - V1.pdf",
+      "bytes": 7510775,
+      "sha256": "40d82be19eb29775a0e50b16b5e03343985b4757b980c123e618a9b7ffeaf08d",
+      "category": "uiux",
+      "gallery_ids": [
+        "nr-campaign-landing-page-page-1"
+      ],
+      "kind": "pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "page": 1,
+          "points": [
+            1400.0,
+            10731.0
+          ],
+          "rendered_pixels": [
+            1400,
+            10731
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/nr-campaign-landing-page-page-1.webp",
+          "bytes": 846878,
+          "sha256": "771187b4eb5a4b9455374d3bc2d593de0f4b5a7e38d92992b532f74bfa6280ab",
+          "role": "full",
+          "width": 1400,
+          "height": 10731
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/nr-campaign-landing-page-page-1-thumb.webp",
+          "bytes": 304790,
+          "sha256": "538fe251f936f89cff0e54a6bf975f34cca5cb0c9923ab80d3031f432bc56330",
+          "role": "thumbnail",
+          "width": 783,
+          "height": 6000
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/122025 - iX Hello - Chat Bot Hero - Option 2.png",
+      "bytes": 5055505,
+      "sha256": "fb60517754d760ee152878ff82d26a2d7de390e6b0ca4a816195cbf72f8e6c38",
+      "category": "uiux",
+      "gallery_ids": [
+        "ix-hello-chatbot"
+      ],
+      "kind": "image",
+      "width": 2882,
+      "height": 6398,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/ix-hello-chatbot.webp",
+          "bytes": 439252,
+          "sha256": "71187378fb1409f77d20c19014b919b366732ad8a159da69c6fd29f76b6801e5",
+          "role": "full",
+          "width": 2400,
+          "height": 5328
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/ix-hello-chatbot-thumb.webp",
+          "bytes": 110932,
+          "sha256": "21b8f94c7a8379d1f5ea0de0b8e0b751ee11f9cc7fadf7b15abfcf53d716cd69",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2220
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Enterprise Performance Landing Page.pdf",
+      "bytes": 2370279,
+      "sha256": "1b589248664714e4a0069b90d5e31265a8a36fabdf183e47b06a5865ea77c241",
+      "category": "uiux",
+      "gallery_ids": [
+        "enterprise-performance-page-1"
+      ],
+      "kind": "pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "page": 1,
+          "points": [
+            1450.0,
+            4077.78125
+          ],
+          "rendered_pixels": [
+            1450,
+            4078
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/enterprise-performance-page-1.webp",
+          "bytes": 233354,
+          "sha256": "05aed4f0b8fa505b9a34fead2eeeb95d1cb216951f86c8b2d7537dd5676804b7",
+          "role": "full",
+          "width": 1450,
+          "height": 4078
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/enterprise-performance-page-1-thumb.webp",
+          "bytes": 113676,
+          "sha256": "a891a576c7cc835b4d2db4fb6d145bc527b70aa965aeae98f429c1327f1d17f5",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 2812
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Frame 13.png",
+      "bytes": 4020379,
+      "sha256": "41e1b69d332aa88ac43c3f1f792103e5fb0af6d2010accec878f312e393f1be5",
+      "category": "uiux",
+      "gallery_ids": [
+        "value-creation-products"
+      ],
+      "kind": "image",
+      "width": 2880,
+      "height": 2004,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/value-creation-products.webp",
+          "bytes": 270864,
+          "sha256": "5044399c18b70b2e1d8bd40648e611d73e4923054ea4748dd25eaa4c4b2eddff",
+          "role": "full",
+          "width": 2400,
+          "height": 1670
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/value-creation-products-thumb.webp",
+          "bytes": 56240,
+          "sha256": "b23a38f59491037e597e570f927ed870c676b83c21c404505875671746fc50f1",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 696
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Hero - Engineering.png",
+      "bytes": 531122,
+      "sha256": "399ac45ce16421a633d279b74fcd5eb4adf582fe4049251890052211d43677f6",
+      "category": "uiux",
+      "gallery_ids": [
+        "hero-engineering"
+      ],
+      "kind": "image",
+      "width": 1448,
+      "height": 916,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-engineering.webp",
+          "bytes": 53248,
+          "sha256": "14d6e6a4c76df5c27d248891f055bb20b20fa4843a7372e13c079ea295c207d8",
+          "role": "full",
+          "width": 1448,
+          "height": 916
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-engineering-thumb.webp",
+          "bytes": 27760,
+          "sha256": "36c2606c2e8b071d3b41963dbc9cb8e25d511ee9929d606b79e1eeca1498a0ac",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 633
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Hero - Intelligence.png",
+      "bytes": 431856,
+      "sha256": "41e16cdcc2353b0a4bc02d748a946bc20c57968dfcdc449f528a9ab2774e9ec7",
+      "category": "uiux",
+      "gallery_ids": [
+        "hero-intelligence"
+      ],
+      "kind": "image",
+      "width": 1448,
+      "height": 916,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-intelligence.webp",
+          "bytes": 46252,
+          "sha256": "ec48ac2797cd234cabff66cc2a3015c6c152b8acf41e7227aae18ad5d1293594",
+          "role": "full",
+          "width": 1448,
+          "height": 916
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-intelligence-thumb.webp",
+          "bytes": 23766,
+          "sha256": "4d6f6adb9bf50b72978a4552226fa2f43668d5825cc331802921404955ab58c4",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 633
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Hero - Strategy - Option 2.png",
+      "bytes": 393053,
+      "sha256": "83100234c2ea721be733f7db221bdeaa15572e0fcb825afa786e2c0aaec47418",
+      "category": "uiux",
+      "gallery_ids": [
+        "hero-strategy"
+      ],
+      "kind": "image",
+      "width": 1448,
+      "height": 916,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-strategy.webp",
+          "bytes": 43404,
+          "sha256": "f085de28908b63eb478ad480effeab2373316f26eef8e14e26a9b1fd03230396",
+          "role": "full",
+          "width": 1448,
+          "height": 916
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/hero-strategy-thumb.webp",
+          "bytes": 22588,
+          "sha256": "5bbbe4aff83bd0624e211d52063d2b35a6ab81f324e3357d6fbf2473190ef700",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 633
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Home Page 4.17.2026 v1.pdf",
+      "bytes": 3286487,
+      "sha256": "9767d2db1de092aea8a8f74daed2f7ce486314a629dfc0d6659665bd1f1b550a",
+      "category": "uiux",
+      "gallery_ids": [
+        "homepage-design-page-1"
+      ],
+      "kind": "pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "page": 1,
+          "points": [
+            1405.0,
+            7779.0
+          ],
+          "rendered_pixels": [
+            1405,
+            7779
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/homepage-design-page-1.webp",
+          "bytes": 516952,
+          "sha256": "a3bddb352b8560e2640331daeb94718972e388e0cba20600ab96a30317eced73",
+          "role": "full",
+          "width": 1405,
+          "height": 7779
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/homepage-design-page-1-thumb.webp",
+          "bytes": 264454,
+          "sha256": "47e4679bab58e0df2421679dfa6c69939c549da5d711348bdb02f9c5c258ddad",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 5537
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/Industries.png",
+      "bytes": 4790545,
+      "sha256": "da7a250eb337eb983e9cb67704bcf70d077535becc3b054516122c74733f1958",
+      "category": "uiux",
+      "gallery_ids": [
+        "industries-grid"
+      ],
+      "kind": "image",
+      "width": 5600,
+      "height": 4784,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/industries-grid.webp",
+          "bytes": 241614,
+          "sha256": "71ed0b911b0f9ab0f6cf1879ec70c3ef89531d809662ad666ee316e3b6e6ecd4",
+          "role": "full",
+          "width": 2400,
+          "height": 2050
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/industries-grid-thumb.webp",
+          "bytes": 60864,
+          "sha256": "16af824e6ca4d12984bcfc2d6dc9ea1e09d7e178c17516c1bac3ac1d0084bed4",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 854
+        }
+      ]
+    },
+    {
+      "path": "UI-UX/iX Website - Product Page 2 - Advisor Assist V2.png",
+      "bytes": 4098549,
+      "sha256": "a16299fdcba82020981e49813608c9f6be1e3c26e5487144edb8e33fdd2af7c8",
+      "category": "uiux",
+      "gallery_ids": [
+        "advisor-assist-product"
+      ],
+      "kind": "image",
+      "width": 2900,
+      "height": 1894,
+      "mode": "RGBA",
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/advisor-assist-product.webp",
+          "bytes": 133630,
+          "sha256": "c58f1481b432a4ffd12fb877005d56d50b71f21a11579273ce15589f3b3979a8",
+          "role": "full",
+          "width": 2400,
+          "height": 1567
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/uiux/advisor-assist-product-thumb.webp",
+          "bytes": 32584,
+          "sha256": "17042a87c127a6c1b63aa2efad728deab2cd05676d5d91b68ad02101b58a3089",
+          "role": "thumbnail",
+          "width": 1000,
+          "height": 653
+        }
+      ]
+    },
+    {
+      "path": "Videos/AgenticValueMap_Retail_FINAL 2.mp4",
+      "bytes": 10141872,
+      "sha256": "1e2a69100e8dd7422843942ad1f3c657e9d8f796dbf26119cdc47bcc682021f3",
+      "category": "motion",
+      "gallery_ids": [
+        "agentic-value-map-retail"
+      ],
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 14.1,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "14.100000"
+        }
+      ],
+      "poster_time_seconds": 4.935,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/agentic-value-map-retail-poster.webp",
+          "bytes": 28918,
+          "sha256": "d5a54126b0445dccdd0e47a9b59ff7146f9b87f52d958ad862b9eb4c70bad39b",
+          "role": "poster",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/agentic-value-map-retail.mp4",
+          "bytes": 2450279,
+          "sha256": "92edc778540ebc2fb322e899527b7f13cb06a399c2d6851d724f7364c965b5c3",
+          "role": "video",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 14.1,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "30/1",
+              "duration": "14.100000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Videos/CNXU_Video_RevisedFeb14 2.mp4",
+      "bytes": 7362661,
+      "sha256": "46a06d8a212b41677f3e99765a386c35cbae5ccff12ac930ef90e24cfd97c571",
+      "category": "motion",
+      "gallery_ids": [
+        "concentrix-university"
+      ],
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 37.213,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "16755000/559201",
+          "duration": "37.213000"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "duration": "37.213000"
+        }
+      ],
+      "poster_time_seconds": 13.025,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/concentrix-university-poster.webp",
+          "bytes": 11434,
+          "sha256": "21fbaee269e6d10f7a8a8e02ba330979ef79b31f1b5868b270224bf2e0e3efde",
+          "role": "poster",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/concentrix-university.mp4",
+          "bytes": 5911244,
+          "sha256": "805d356fd5e9e259c527163cc1f2428d774d0152e1b6324f0815e62418e44b98",
+          "role": "video",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 37.2372,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "30000/1001",
+              "duration": "37.237200"
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "avg_frame_rate": "0/0",
+              "sample_rate": "48000",
+              "channels": 2,
+              "duration": "37.213000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Videos/Coachcentrix Program Promotional Video_Revised_Feb11 2.mp4",
+      "bytes": 11824184,
+      "sha256": "2cccc5898b112812a648820c09d6a5d441bd061838aa0d55dae969165e778c2d",
+      "category": "motion",
+      "gallery_ids": [
+        "coachcentrix-program"
+      ],
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 30.45,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30000/1001",
+          "duration": "30.450000"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "duration": "30.450000"
+        }
+      ],
+      "poster_time_seconds": 10.657,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/coachcentrix-program-poster.webp",
+          "bytes": 42534,
+          "sha256": "9886d6a67c452a03c0945abf3db43126a70e1a2e3dca23e15c05265e89036b0f",
+          "role": "poster",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/coachcentrix-program.mp4",
+          "bytes": 6270346,
+          "sha256": "b0365081803ba08a311053a7622683fe042f90deb90a9b9c4bf7c39d93e0324f",
+          "role": "video",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 30.463767,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "30000/1001",
+              "duration": "30.463767"
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "avg_frame_rate": "0/0",
+              "sample_rate": "48000",
+              "channels": 2,
+              "duration": "30.450000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Videos/Gen-4 Create a short animated video of a few dark blue shopping bags falling down from the top using parachutes The parachutes gently guide the bags down, creating a whimsical and elegant delivery ef (1).mp4",
+      "bytes": 5117501,
+      "sha256": "839ac8738bfb362ac879a1d42731cc8b917cfc9c35efbdaafbf6eba844e6b87a",
+      "category": "motion",
+      "gallery_ids": [
+        "parachute-shopping-bags"
+      ],
+      "kind": "video",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 10.083333,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 720,
+          "height": 1280,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "24/1",
+          "duration": "10.083333"
+        }
+      ],
+      "poster_time_seconds": 3.529,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/parachute-shopping-bags-poster.webp",
+          "bytes": 74762,
+          "sha256": "93471cc5198cc5e9c86cd02f430babb469436a27915dc0dcf676751a268e54f8",
+          "role": "poster",
+          "width": 562,
+          "height": 1000
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/parachute-shopping-bags.mp4",
+          "bytes": 2188322,
+          "sha256": "0ff82298f1017d11a83305e522a1d4b009238a8df5bdb15ff0e2552f28d48724",
+          "role": "video",
+          "width": 720,
+          "height": 1280,
+          "duration_seconds": 10.083333,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 720,
+              "height": 1280,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "24/1",
+              "duration": "10.083333"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Videos/KOM23 Intro - Outro.mp4",
+      "bytes": 8313087,
+      "sha256": "b3864a2c8e3b2404c187892833b195336fb8e303e16c38bd12113f292cf9993a",
+      "category": "motion",
+      "gallery_ids": [
+        "kom23-intro-outro"
+      ],
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 11.028,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "60/1",
+          "duration": "11.000000"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "duration": "11.028000"
+        }
+      ],
+      "poster_time_seconds": 3.86,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/kom23-intro-outro-poster.webp",
+          "bytes": 29852,
+          "sha256": "066f693ffb9e00d37fcbd5c46fe7cfcb89c72a0a6024a2f585d4a79a493b6f4f",
+          "role": "poster",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/kom23-intro-outro.mp4",
+          "bytes": 5794179,
+          "sha256": "3c80c2dfd0923e81b25efb354c0537724fb9587aaa5e0724e41f9c72ccb6eb9a",
+          "role": "video",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 11.028,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "duration": "11.000000"
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "avg_frame_rate": "0/0",
+              "sample_rate": "48000",
+              "channels": 2,
+              "duration": "11.028000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Videos/WisdomAnim3.mp4",
+      "bytes": 4684131,
+      "sha256": "6c515989e22e736ca601efbc1d9770755a82550a8b4f39705eea487bdd3ee56e",
+      "category": "motion",
+      "gallery_ids": [
+        "wisdom-brand-animation"
+      ],
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 10.004,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "9.966667"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "duration": "10.004000"
+        }
+      ],
+      "poster_time_seconds": 3.501,
+      "optimized_selected": true,
+      "outputs": [
+        {
+          "path": "WebsiteAssets/gallery/media/motion/wisdom-brand-animation-poster.webp",
+          "bytes": 4684,
+          "sha256": "3f8a09d7eb414ee68017d7ee7dd0abaf897ecc0e530a52f1f285f480295db1fc",
+          "role": "poster",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "path": "WebsiteAssets/gallery/media/motion/wisdom-brand-animation.mp4",
+          "bytes": 340210,
+          "sha256": "90eac607b837c44d2979362684d0a71862e71a9e0eea22875e877bf11808597c",
+          "role": "video",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 10.004,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "30/1",
+              "duration": "9.966667"
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "avg_frame_rate": "0/0",
+              "sample_rate": "48000",
+              "channels": 2,
+              "duration": "10.004000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

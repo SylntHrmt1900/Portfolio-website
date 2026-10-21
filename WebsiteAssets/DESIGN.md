@@ -1,26 +1,37 @@
-# RESTORED ORIGINAL DESIGN — DO NOT REDESIGN
+# RESTORED ORIGINAL DESIGN — PRESERVE THE COMPOSITION
 
-The source of truth for this website is `index.html`. Preserve the premium DARK cinematic editorial design.
+The live source is `WebsiteAssets/index.html`. Keep the dark cinematic editorial
+direction: background #0E1116, glass surface #161B22, amber #F5B921, cobalt
+#3B82F6, light text #F5F7FA. Fonts are Plus Jakarta Sans and Playfair Display.
+Preserve the rounded photographic portrait and the existing authored career content.
 
-Palette: background #0E1116, glass surface #161B22, amber CTA #F5B921, cobalt-blue lighting #3B82F6, text #F5F7FA.
-Typography: Plus Jakarta Sans with Playfair Display italic accents.
+## Two-view architecture
 
-## CRITICAL: Two-view architecture (keep exactly)
-- Homepage `#homeView` contains all original sections, six folder cards and category filters.
-- Separate category page view `#categoryView` replaces the homepage visually when any folder is opened. The separate category-view HEADER contains a "Back to Homepage" button.
-- `openCategory()` shows `#categoryView` and hides `#homeView`, `navigateToHome()` reverses the change and returns to `#work`.
-- Preserve hash routing and browser history.
-- Never move `#categoryFilterContainer` or `#portfolioFolderGrid` outside of `#work` or `#homeView`.
-- Preserve category header, breadcrumb, quick-switcher and category page layout.
+- `#homeView` holds the homepage, six folder cards, and filters.
+- `#categoryView` is the separate category page shown after selecting a folder.
+- Preserve its header, breadcrumb, quick-switcher, and Back to Homepage control.
+- `openCategory()`, `navigateToHome()` and hash routing retain browser history.
+- Never move `#categoryFilterContainer` or `#portfolioFolderGrid` outside `#work`.
+- Keep category IDs `uiux`, `motion`, `branding`, `elearning`, `ai`, `executive`.
+- Root `index.html` is a Pages entry redirect; asset paths remain relative to the app.
 
-## Future artwork-only requirement (not implemented until user provides files)
-Only when actual artwork files are supplied, replace project cards INSIDE `#catViewProjectsGrid` with artwork-only image tiles, preserving existing category view routing and surrounding layout. Opening an artwork should show an enlarged lightbox. Do not clear existing demo content until the real assets are available and verified.
+## Actual media galleries
 
-Do not introduce extra galleries, an empty-manifest replacement, filler banners, or new homepage sections.
+`gallery/works.js` supplies every uploaded work. The shared renderer and styles
+are `portfolio-gallery.js` and `portfolio-gallery.css`.
 
-## AI pilot implemented
-- The AI category now renders actual artwork from `gallery/ai-artworks.js`.
-- Its tiles and dialog must show the full artwork proportionally without cropping.
-- Do not reintroduce visible tile titles, descriptions, badges, or text overlays.
-- Keep the other five categories unchanged until their artwork is supplied.
-- Preserve the dialog's keyboard controls, focus restoration, and gallery scroll position.
+- Show image/media tiles only: no titles, descriptions, client badges, dates,
+  artificial project counts, or hover captions.
+- Always contain the full artwork; never crop or stretch it. Long documents
+  fit in a bounded preview and support zoom/scroll in the dialog.
+- Neutral light plates make transparent dark logos visible without modifying them.
+- Video tiles use actual posters with a play icon, native controls and no autoplay.
+- Keep original artwork and PDF/video files; optimize separate generated copies.
+- eLearning is pending. Keep a navigable, honest empty state until its media arrives.
+- Use soft 1.3-second reveals, brief capped staggers, and the AI pilot's
+  600ms preview opening / 320ms closing. Respect reduced motion.
+- Retain Escape, previous/next, focus trapping/restoration and gallery scroll position.
+
+Do not add new promotional sections, fictional projects, synthetic SVG work,
+metrics or career claims. Keep the contact form truthful about email-client
+submission and the CV action truthful about requesting a file by email.

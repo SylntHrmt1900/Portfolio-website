@@ -1,51 +1,91 @@
-# Portfolio-website
+# Rajakumar M — Creative Portfolio
 
-Rajakumar M's portfolio. The live entry point is **WebsiteAssets/index.html**;
-`WebsiteAssets/code.html` is the original reference export.
+[Open the portfolio](https://sylnthrmt1900.github.io/Portfolio-website/)
 
-## Preview the AI gallery
+The root `index.html` opens `WebsiteAssets/index.html`, preserving category
+links and query strings. `.nojekyll` makes GitHub Pages serve the static site;
+the project root now opens the portfolio instead of rendering this README.
+The existing Pages deployment uses `main` and the repository root.
 
-Open `WebsiteAssets/index.html` in a browser, then select the **AI Creative
-Pipelines** folder under Selected Work. You can also serve the whole repository:
+## Selected Work
+
+| Category | Uploaded works | Contents |
+| --- | ---: | --- |
+| UI/UX & Web | 11 | Seven images and four complete PDF page previews |
+| Motion & Video | 6 | Video posters and on-demand HTML5 playback |
+| Brand & Campaigns | 15 | Campaign artwork, logos, and identity assets |
+| AI Creative Pipelines | 16 | Original seven pieces plus nine newly uploaded works |
+| Executive Presentation & Comms | 10 | Newsletters and communication designs |
+| eLearning & Interactive | Pending | Category and navigation retained; no fabricated projects |
+
+All 58 supplied works are connected through `WebsiteAssets/gallery/works.js`.
+Tiles show complete, proportionally scaled artwork without titles or captions.
+Long pages fit inside the tile; the preview's zoom control lets visitors read
+and scroll the detail. The original-file control opens the untouched image,
+PDF, or video in a new tab. Video tiles show a play control; playback starts
+only when requested and stops when changing items or closing the preview.
+
+The homepage composition, portrait, category headers, career history, Infosys
+feature, and navigation remain in place. Every work folder and gallery uses
+the AI pilot's soft fade/movement and viewport stagger. Preview opening and
+closing respect reduced-motion preferences, preserve focus and scroll, and
+support keyboard controls.
+
+## Image and video optimization
+
+The supplied originals remain untouched in `AI/`, `Brand Systems/`,
+`Executive Presentation/`, `UI-UX/`, and `Videos/`. The manifest points to
+optimized copies under `WebsiteAssets/gallery/media/`:
+
+- About **39.7 MB of generated media versus 160.1 MB of originals**, including
+  both thumbnails and full previews (about 75% smaller).
+- WebP previews preserve aspect ratio and transparency; no cropping/upscaling.
+  Embedded Adobe RGB artwork is converted to sRGB for consistent browser color.
+- Full PDF pages are rendered as image previews; original PDFs remain linked.
+- Six H.264 videos use faststart, retain their proportions/audio, and load on demand.
+- Gallery images are lazy-loaded; full image previews decode before replacing
+  their lightweight thumbnail.
+
+`docs/media-inventory.json` records every source, output, checksum, dimension,
+PDF page count, codec, and byte total. `docs/website-update.md` records this pass.
+
+## Preview and update
+
+Serve the repository root with any static web server, for example:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Open `WebsiteAssets/index.html` through that local server. Keep `AI/` and
-`WebsiteAssets/` together; original images use relative paths between them.
-The existing site loads Tailwind, Lenis, and fonts from external CDNs, so an
-Internet connection is required for its original styling and scrolling.
+Open the server's root in a browser. Keep the folder structure intact. The
+existing fonts, Tailwind styling, and Lenis load from external CDNs, requiring
+an Internet connection. No app build or backend service is needed.
 
-## This pilot
+`WebsiteAssets/index.html` is the live app source; `WebsiteAssets/code.html`
+is the original reference export. Shared rendering and styles live in
+`WebsiteAssets/portfolio-gallery.js` and `WebsiteAssets/portfolio-gallery.css`.
+The old AI-only files remain for compatibility with earlier cached previews.
 
-- Only AI now displays the seven uploaded artworks as image-only tiles.
-- Every tile shows the complete image at its natural proportions.
-- Click a tile for the full-resolution original in a dialog. Use the close
-  button, Escape, or the backdrop to return to the same gallery position.
-- Previous/next buttons and Left/Right keys move between artworks.
-- The AI homepage card and gallery tiles reveal with a soft 1.3-second fade
-  and gentle upward movement. Gallery reveals use a short stagger as they
-  enter the viewport. The preview fades/scales open and closes smoothly.
-  Reduced-motion preferences show content and dismiss the preview immediately.
-- The original homepage, category headers, quick-switch tabs, and return
-  navigation are retained. The other five categories still contain the
-  original demonstration projects and are awaiting their own artwork pass.
+For future uploads, add the original files, then update `SOURCES` in
+`scripts/prepare_gallery.py` with their category, ordering and accessibility
+text. Install Pillow and PyMuPDF and have `ffmpeg`/`ffprobe` available, then run:
 
-## Artwork files
+```sh
+python3 scripts/prepare_gallery.py
+```
 
-`AI/` contains the untouched originals. `WebsiteAssets/gallery/ai/` contains
-1200px-wide WebP previews, resized proportionally without cropping. Together
-these previews are about 0.8 MB; full-size originals load when opened.
+The script refuses to silently omit unlisted files and regenerates only its
+optimized outputs, manifest, and inventory. For eLearning, add its folder and
+records to `SOURCES`; keep the existing `elearning` category ID. Normal site
+viewing uses the checked-in generated files and needs no Python packages.
 
-`WebsiteAssets/gallery/ai-artworks.js` controls artwork order, original paths,
-preview paths, dimensions, and screen-reader descriptions. To add an image,
-keep its original in `AI/`, create an uncropped proportional WebP preview, and
-add an entry to that manifest. Paths are relative to `WebsiteAssets/index.html`.
-Descriptions are accessibility labels and are never shown as tile captions.
+Push completed changes to `main`; the existing GitHub Pages job republishes
+the website. After its successful run, refresh the site to pick up the update.
 
-The renderer and dialog are in `WebsiteAssets/ai-gallery.js`; their styles are
-scoped in `WebsiteAssets/ai-gallery.css`. No build tool is required to run them.
+## Contact and CV
 
-Publication, the remaining category galleries, and the existing contact/CV
-behavior are outside this AI-only pass.
+The contact form validates input, preserves it, and opens an encoded email
+draft. Visitors must send that draft in their email application; the site
+never claims delivery. No email backend or frontend API key is invented.
+The CV action is accurately labeled **Request CV by Email** because no resume
+PDF has been supplied. The UI/UX PDFs are portfolio work, not resume files.

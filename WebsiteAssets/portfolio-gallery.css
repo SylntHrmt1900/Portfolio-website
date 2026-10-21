@@ -1,0 +1,244 @@
+/* Shared, uncropped galleries and soft motion for every work category. */
+#portfolioFolderGrid .portfolio-card {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#portfolioFolderGrid .portfolio-card.revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#portfolioFolderGrid .portfolio-card.revealed:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+#catViewProjectsGrid.work-grid {
+  display: block;
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.work-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 8px;
+  break-inside: avoid;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(22, 27, 34, 0.65);
+  cursor: zoom-in;
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 180ms ease, background-color 180ms ease;
+  transition-delay: var(--work-reveal-delay, 0ms), var(--work-reveal-delay, 0ms), 0ms, 0ms;
+}
+
+.work-tile.is-reveal-pending {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+}
+
+.work-tile.is-revealed,
+.work-tile:focus-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.work-tile:focus-visible {
+  transition-duration: 0ms, 0ms, 180ms, 180ms;
+  transition-delay: 0ms;
+}
+
+.work-tile:hover {
+  border-color: #3B82F6;
+  background: #161B22;
+}
+
+.work-tile:focus-visible,
+.work-dialog button:focus-visible,
+.work-dialog a:focus-visible {
+  outline: 3px solid #F5B921;
+  outline-offset: 4px;
+}
+
+.work-tile img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(560px, 70vh);
+  object-fit: contain;
+}
+
+.work-dialog {
+  width: min(960px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: #161B22;
+  color: #F5F7FA;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  overscroll-behavior: contain;
+  opacity: 0;
+  transform: translateY(8px) scale(0.985);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-dialog.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.work-dialog.is-closing {
+  transition-duration: 320ms;
+}
+
+.work-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-dialog.is-visible::backdrop { opacity: 1; }
+.work-dialog.is-closing::backdrop { transition-duration: 320ms; }
+
+.work-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.work-dialog button,
+.work-dialog .work-original {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: #0E1116;
+  color: #F5F7FA;
+  cursor: pointer;
+  transition: border-color 180ms ease;
+}
+
+.work-dialog button:hover, .work-dialog .work-original:hover { border-color: #F5B921; }
+.work-dialog button svg, .work-dialog .work-original svg { width: 20px; height: 20px; }
+
+.work-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 0 16px;
+}
+
+.work-stage img,
+.work-stage video {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(70vh, 760px);
+  max-height: min(70dvh, 760px);
+  object-fit: contain;
+}
+
+.work-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 16px;
+}
+
+.work-position {
+  min-width: 48px;
+  text-align: center;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: #B4BCC8;
+}
+
+.work-error {
+  padding: 16px;
+  color: #F5F7FA;
+  font-size: 14px;
+  text-align: center;
+}
+.work-error a { color: #F5B921; text-decoration: underline; }
+
+@media (max-width: 1023px) {
+  #catViewProjectsGrid.work-grid { column-count: 2; }
+}
+@media (max-width: 639px) {
+  #catViewProjectsGrid.work-grid { column-count: 1; }
+  .work-stage { padding-inline: 8px; }
+  .work-dialog { border-radius: 16px; }
+}
+@media (max-height: 500px) {
+  .work-stage img,
+.work-stage video { max-height: calc(100vh - 164px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #portfolioFolderGrid .portfolio-card,
+  .work-tile,
+  .work-tile.is-reveal-pending,
+  .work-tile.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms !important;
+  }
+  #portfolioFolderGrid .portfolio-card.revealed:hover { transform: none; }
+  .work-dialog,
+  .work-dialog::backdrop,
+  .work-dialog button,
+  .work-dialog .work-original { transition: none; }
+}
+
+/* Transparent dark logos get a neutral light plate without altering the files. */
+.work-tile.is-light, .work-tile.is-light:hover, .work-stage.is-light { background: #F3F5F7; }
+.work-dialog [hidden] { display: none !important; }
+.work-tile .work-play {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; pointer-events: none;
+}
+.work-play svg {
+  width: 52px; height: 52px; padding: 14px;
+  border-radius: 50%; background: rgba(14, 17, 22, .85);
+  color: #F5F7FA; border: 1px solid rgba(255,255,255,.4);
+}
+.work-stage.is-zoomed {
+  display: block; max-height: min(70dvh, 760px); padding: 0;
+  overflow: auto; overscroll-behavior: contain;
+}
+.work-stage.is-zoomed img {
+  width: var(--work-zoom-width); height: auto;
+  max-width: none; max-height: none;
+}
+.work-empty { grid-column: 1 / -1; padding: 48px 24px; text-align: center; color: #B4BCC8; }
+.work-empty p { margin-bottom: 24px; }
+.work-return {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 12px 24px; border-radius: 9999px;
+  background: #F5B921; color: #0E1116; font-weight: 700;
+}
